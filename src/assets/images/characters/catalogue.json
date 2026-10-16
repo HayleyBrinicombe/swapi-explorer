@@ -1,0 +1,494 @@
+[
+  {
+    "id": "1",
+    "name": "Luke Skywalker",
+    "file": "1-luke-skywalker.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/1.jpg"
+  },
+  {
+    "id": "2",
+    "name": "C-3PO",
+    "file": "2-c-3po.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/2.jpg"
+  },
+  {
+    "id": "3",
+    "name": "R2-D2",
+    "file": "3-r2-d2.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/3.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Darth Vader",
+    "file": "4-darth-vader.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/4.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Leia Organa",
+    "file": "5-leia-organa.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/5.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Owen Lars",
+    "file": "6-owen-lars.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/6.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Beru Whitesun lars",
+    "file": "7-beru-whitesun-lars.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/7.jpg"
+  },
+  {
+    "id": "8",
+    "name": "R5-D4",
+    "file": "8-r5-d4.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/8.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Biggs Darklighter",
+    "file": "9-biggs-darklighter.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/9.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Obi-Wan Kenobi",
+    "file": "10-obi-wan-kenobi.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/10.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Anakin Skywalker",
+    "file": "11-anakin-skywalker.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/11.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Wilhuff Tarkin",
+    "file": "12-wilhuff-tarkin.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/12.jpg"
+  },
+  {
+    "id": "13",
+    "name": "Chewbacca",
+    "file": "13-chewbacca.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/13.jpg"
+  },
+  {
+    "id": "14",
+    "name": "Han Solo",
+    "file": "14-han-solo.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/14.jpg"
+  },
+  {
+    "id": "15",
+    "name": "Greedo",
+    "file": "15-greedo.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/15.jpg"
+  },
+  {
+    "id": "16",
+    "name": "Jabba Desilijic Tiure",
+    "file": "16-jabba-desilijic-tiure.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/16.jpg"
+  },
+  {
+    "id": "18",
+    "name": "Wedge Antilles",
+    "file": "18-wedge-antilles.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/18.jpg"
+  },
+  {
+    "id": "19",
+    "name": "Jek Tono Porkins",
+    "file": "19-jek-tono-porkins.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/19.jpg"
+  },
+  {
+    "id": "20",
+    "name": "Yoda",
+    "file": "20-yoda.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/20.jpg"
+  },
+  {
+    "id": "21",
+    "name": "Palpatine",
+    "file": "21-palpatine.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/21.jpg"
+  },
+  {
+    "id": "22",
+    "name": "Boba Fett",
+    "file": "22-boba-fett.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/22.jpg"
+  },
+  {
+    "id": "23",
+    "name": "IG-88",
+    "file": "23-ig-88.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/23.jpg"
+  },
+  {
+    "id": "24",
+    "name": "Bossk",
+    "file": "24-bossk.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/24.jpg"
+  },
+  {
+    "id": "25",
+    "name": "Lando Calrissian",
+    "file": "25-lando-calrissian.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/25.jpg"
+  },
+  {
+    "id": "26",
+    "name": "Lobot",
+    "file": "26-lobot.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/26.jpg"
+  },
+  {
+    "id": "27",
+    "name": "Ackbar",
+    "file": "27-ackbar.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/27.jpg"
+  },
+  {
+    "id": "28",
+    "name": "Mon Mothma",
+    "file": "28-mon-mothma.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/28.jpg"
+  },
+  {
+    "id": "29",
+    "name": "Arvel Crynyd",
+    "file": "29-arvel-crynyd.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/29.jpg"
+  },
+  {
+    "id": "30",
+    "name": "Wicket Systri Warrick",
+    "file": "30-wicket-systri-warrick.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/30.jpg"
+  },
+  {
+    "id": "31",
+    "name": "Nien Nunb",
+    "file": "31-nien-nunb.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/31.jpg"
+  },
+  {
+    "id": "32",
+    "name": "Qui-Gon Jinn",
+    "file": "32-qui-gon-jinn.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/32.jpg"
+  },
+  {
+    "id": "33",
+    "name": "Nute Gunray",
+    "file": "33-nute-gunray.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/33.jpg"
+  },
+  {
+    "id": "34",
+    "name": "Finis Valorum",
+    "file": "34-finis-valorum.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/34.jpg"
+  },
+  {
+    "id": "35",
+    "name": "Padm\u00e9 Amidala",
+    "file": "35-padm-amidala.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/35.jpg"
+  },
+  {
+    "id": "36",
+    "name": "Jar Jar Binks",
+    "file": "36-jar-jar-binks.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/36.jpg"
+  },
+  {
+    "id": "37",
+    "name": "Roos Tarpals",
+    "file": "37-roos-tarpals.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/37.jpg"
+  },
+  {
+    "id": "38",
+    "name": "Rugor Nass",
+    "file": "38-rugor-nass.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/38.jpg"
+  },
+  {
+    "id": "39",
+    "name": "Ric Oli\u00e9",
+    "file": "39-ric-oli.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/39.jpg"
+  },
+  {
+    "id": "40",
+    "name": "Watto",
+    "file": "40-watto.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/40.jpg"
+  },
+  {
+    "id": "41",
+    "name": "Sebulba",
+    "file": "41-sebulba.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/41.jpg"
+  },
+  {
+    "id": "42",
+    "name": "Quarsh Panaka",
+    "file": "42-quarsh-panaka.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/42.jpg"
+  },
+  {
+    "id": "43",
+    "name": "Shmi Skywalker",
+    "file": "43-shmi-skywalker.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/43.jpg"
+  },
+  {
+    "id": "44",
+    "name": "Darth Maul",
+    "file": "44-darth-maul.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/44.jpg"
+  },
+  {
+    "id": "45",
+    "name": "Bib Fortuna",
+    "file": "45-bib-fortuna.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/45.jpg"
+  },
+  {
+    "id": "46",
+    "name": "Ayla Secura",
+    "file": "46-ayla-secura.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/46.jpg"
+  },
+  {
+    "id": "47",
+    "name": "Ratts Tyerel",
+    "file": "47-ratts-tyerel.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/47.jpg"
+  },
+  {
+    "id": "48",
+    "name": "Dud Bolt",
+    "file": "48-dud-bolt.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/48.jpg"
+  },
+  {
+    "id": "49",
+    "name": "Gasgano",
+    "file": "49-gasgano.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/49.jpg"
+  },
+  {
+    "id": "50",
+    "name": "Ben Quadinaros",
+    "file": "50-ben-quadinaros.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/50.jpg"
+  },
+  {
+    "id": "51",
+    "name": "Mace Windu",
+    "file": "51-mace-windu.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/51.jpg"
+  },
+  {
+    "id": "52",
+    "name": "Ki-Adi-Mundi",
+    "file": "52-ki-adi-mundi.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/52.jpg"
+  },
+  {
+    "id": "53",
+    "name": "Kit Fisto",
+    "file": "53-kit-fisto.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/53.jpg"
+  },
+  {
+    "id": "54",
+    "name": "Eeth Koth",
+    "file": "54-eeth-koth.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/54.jpg"
+  },
+  {
+    "id": "55",
+    "name": "Adi Gallia",
+    "file": "55-adi-gallia.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/55.jpg"
+  },
+  {
+    "id": "56",
+    "name": "Saesee Tiin",
+    "file": "56-saesee-tiin.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/56.jpg"
+  },
+  {
+    "id": "57",
+    "name": "Yarael Poof",
+    "file": "57-yarael-poof.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/57.jpg"
+  },
+  {
+    "id": "58",
+    "name": "Plo Koon",
+    "file": "58-plo-koon.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/58.jpg"
+  },
+  {
+    "id": "59",
+    "name": "Mas Amedda",
+    "file": "59-mas-amedda.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/59.jpg"
+  },
+  {
+    "id": "60",
+    "name": "Gregar Typho",
+    "file": "60-gregar-typho.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/60.jpg"
+  },
+  {
+    "id": "61",
+    "name": "Cord\u00e9",
+    "file": "61-cord.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/61.jpg"
+  },
+  {
+    "id": "62",
+    "name": "Cliegg Lars",
+    "file": "62-cliegg-lars.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/62.jpg"
+  },
+  {
+    "id": "63",
+    "name": "Poggle the Lesser",
+    "file": "63-poggle-the-lesser.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/63.jpg"
+  },
+  {
+    "id": "64",
+    "name": "Luminara Unduli",
+    "file": "64-luminara-unduli.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/64.jpg"
+  },
+  {
+    "id": "65",
+    "name": "Barriss Offee",
+    "file": "65-barriss-offee.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/65.jpg"
+  },
+  {
+    "id": "66",
+    "name": "Dorm\u00e9",
+    "file": "66-dorm.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/66.jpg"
+  },
+  {
+    "id": "67",
+    "name": "Dooku",
+    "file": "67-dooku.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/67.jpg"
+  },
+  {
+    "id": "68",
+    "name": "Bail Prestor Organa",
+    "file": "68-bail-prestor-organa.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/68.jpg"
+  },
+  {
+    "id": "69",
+    "name": "Jango Fett",
+    "file": "69-jango-fett.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/69.jpg"
+  },
+  {
+    "id": "70",
+    "name": "Zam Wesell",
+    "file": "70-zam-wesell.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/70.jpg"
+  },
+  {
+    "id": "71",
+    "name": "Dexter Jettster",
+    "file": "71-dexter-jettster.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/71.jpg"
+  },
+  {
+    "id": "72",
+    "name": "Lama Su",
+    "file": "72-lama-su.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/72.jpg"
+  },
+  {
+    "id": "73",
+    "name": "Taun We",
+    "file": "73-taun-we.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/73.jpg"
+  },
+  {
+    "id": "74",
+    "name": "Jocasta Nu",
+    "file": "74-jocasta-nu.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/74.jpg"
+  },
+  {
+    "id": "75",
+    "name": "R4-P17",
+    "file": "75-r4-p17.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/75.jpg"
+  },
+  {
+    "id": "76",
+    "name": "Wat Tambor",
+    "file": "76-wat-tambor.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/76.jpg"
+  },
+  {
+    "id": "77",
+    "name": "San Hill",
+    "file": "77-san-hill.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/77.jpg"
+  },
+  {
+    "id": "78",
+    "name": "Shaak Ti",
+    "file": "78-shaak-ti.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/78.jpg"
+  },
+  {
+    "id": "79",
+    "name": "Grievous",
+    "file": "79-grievous.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/79.jpg"
+  },
+  {
+    "id": "80",
+    "name": "Tarfful",
+    "file": "80-tarfful.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/80.jpg"
+  },
+  {
+    "id": "81",
+    "name": "Raymus Antilles",
+    "file": "81-raymus-antilles.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/81.jpg"
+  },
+  {
+    "id": "82",
+    "name": "Sly Moore",
+    "file": "82-sly-moore.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/82.jpg"
+  },
+  {
+    "id": "83",
+    "name": "Tion Medon",
+    "file": "83-tion-medon.jpg",
+    "source": "https://github.com/vieraboschkova/swapi-gallery/blob/main/docs/static/assets/img/people/83.jpg"
+  }
+]

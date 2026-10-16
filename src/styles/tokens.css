@@ -1,0 +1,74 @@
+:root {
+  color-scheme: dark;
+  --color-background: #080d17;
+  --color-text: #f4f4fa;
+  --color-muted: #a9adbf;
+  --color-accent: #8bcfff;
+  --color-accent-strong: #b8e3ff;
+  --color-focus: #a6d6ff;
+  --color-border: #ffffff14;
+  --color-surface: #ffffff07;
+  --color-error: #ffc2c9;
+  --color-archive-gold: #f6c978;
+  --color-saber-blue: #67c8ff;
+  --color-saber-green: #8be6b1;
+  --color-saber-red: #ff777d;
+  --color-ice: #8bcaff;
+  --color-mint: #9ae6d4;
+  --color-gold-surface: #f6c97812;
+  --color-gold-border: #f6c97830;
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --font-family:
+    'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Barlow Condensed', Impact, sans-serif;
+  --font-2xs: 9px;
+  --font-caption: 10px;
+  --font-tiny: 8px;
+  --font-ui: 12px;
+  --font-brand: 22px;
+  --font-display-mobile: 64px;
+  --font-xs: 11px;
+  --font-sm: 13px;
+  --font-base: 15px;
+  --font-lg: 17px;
+  --font-xl: 24px;
+  --font-title: 30px;
+  --radius-sm: 8px;
+  --radius-control: 12px;
+  --radius-md: 15px;
+  --radius-lg: 22px;
+  --radius-xl: 24px;
+  --radius-pill: 100px;
+  --shadow-card: 0 6px 20px #0002;
+  --shadow-card-hover: 0 15px 40px #0005;
+  --shadow-portrait: 0 24px 55px #0009;
+  --transition-fast: 160ms ease;
+  --radius-button: 14px;
+  --radius-hero: 32px;
+  --transition-base: 220ms ease;
+  --transition-image: 450ms ease;
+  --content-width: 1440px;
+  --page-gutter: 64px;
+  /* CSS variables cannot be used in media queries. Canonical breakpoints:
+     narrow: 360px; compact: 600px; tablet: 800px; laptop: 1150px. */
+}
+@media (max-width: 800px) {
+  :root {
+    --page-gutter: 24px;
+  }
+}
+@media (max-width: 360px) {
+  :root {
+    --page-gutter: 18px;
+  }
+}

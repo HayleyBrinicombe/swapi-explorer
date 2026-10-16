@@ -1,0 +1,155 @@
+.cinematic-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #02050d;
+  animation: intro-exit 700ms ease calc(var(--intro-duration) - 700ms) both;
+}
+.intro-stars {
+  position: absolute;
+  inset: -15%;
+  background:
+    linear-gradient(#02050d33, #02050d99),
+    url('../assets/images/galaxy/nebula.jpg') center/cover;
+  animation: star-flight var(--intro-duration) cubic-bezier(0.1, 0.6, 0.4, 1)
+    both;
+}
+.intro-copy {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-6);
+  animation: intro-title var(--intro-duration) ease both;
+}
+.intro-copy > p:first-child {
+  color: #8bd7ff;
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 350;
+  margin: 0 0 var(--space-8);
+}
+.intro-wordmark {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: clamp(60px, 11vw, 150px);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: 1px;
+  color: #fff5d5;
+  text-shadow: 0 0 45px #ffd77c44;
+}
+.intro-wordmark span {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 2px #ffd77c;
+}
+.intro-caption {
+  color: #b4c2d6;
+  font-size: var(--font-sm);
+  margin-top: var(--space-8);
+}
+.intro-saber {
+  position: absolute;
+  z-index: 2;
+  width: 180vw;
+  height: 5px;
+  left: -40%;
+  top: 50%;
+  border-radius: 100%;
+  background: #fff;
+  opacity: 0;
+}
+.intro-saber--blue {
+  box-shadow:
+    0 0 8px #fff,
+    0 0 25px #35baff,
+    0 0 80px #00aaff;
+  animation: saber-blue 1100ms ease-in-out 5400ms both;
+}
+.intro-saber--red {
+  box-shadow:
+    0 0 8px #fff,
+    0 0 25px #ff353d,
+    0 0 80px #ff123d;
+  animation: saber-red 1100ms ease-in-out 5850ms both;
+}
+.intro-skip {
+  position: absolute;
+  right: var(--space-8);
+  bottom: var(--space-8);
+  z-index: 3;
+}
+[inert] .hero-copy,
+[inert] .hero::before,
+[inert] .character-card {
+  animation-play-state: paused;
+}
+@keyframes star-flight {
+  from {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+  to {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+}
+@keyframes intro-title {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  20%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+@keyframes saber-blue {
+  0% {
+    opacity: 0;
+    transform: translateY(70vh) rotate(-24deg);
+  }
+  30%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-70vh) rotate(-24deg);
+  }
+}
+@keyframes saber-red {
+  0% {
+    opacity: 0;
+    transform: translateY(-70vh) rotate(24deg);
+  }
+  30%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(70vh) rotate(24deg);
+  }
+}
+@keyframes intro-exit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-intro,
+  .cinematic-intro * {
+    animation: none !important;
+  }
+}
