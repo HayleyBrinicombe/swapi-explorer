@@ -1,75 +1,77 @@
 # Engineering decisions
 
-Scope: character browsing, name search and shareable full-page detail. During pairing, the candidate requested richer imagery, iOS-influenced controls, reusable primitives, animation and CI. Those refinements supersede the initial typography-only visual proposal. Additional resource browsers remain deferred.
+My priority was a complete, polished character-exploration journey with clear application boundaries and a straightforward developer setup. I chose a small full-stack architecture that makes validation, data flow and failure handling easy to explain and test.
 
-## Stack and application boundary
+## 1. React and Fastify with one root package
 
-**Problem:** deliver an understandable full-stack assessment with a simple startup.
-**Choice:** React/TypeScript/Vite, Fastify/TypeScript and one root npm package. `src/` is frontend, `server/` is backend, `shared/` owns API contracts.
-**Alternative/cost:** a frontend-only app could satisfy browsing and avoid the extra process/hop. The backend earns its place through validation, a controlled contract, caching and failure translation. Workspaces and a full-stack framework would add configuration or conventions without solving a current problem.
-**Production:** deployment needs would determine whether to preserve this split.
+I selected React, TypeScript and Vite for the frontend, and Node.js, TypeScript and Fastify for the API. This supports a responsive interface while making the frontend/backend responsibilities explicit. One npm package provides a simple `npm install` and `npm run dev` workflow; separate workspaces would add configuration without a useful boundary at this scale.
 
-## Backend boundaries
+Calling SWAPI directly from React would also satisfy basic browsing. I chose a backend to own the application contract, validate external data, cache responses and translate upstream failures into predictable errors. The trade-off is another process and network hop. Deployment requirements would determine whether this split remains appropriate in production.
 
-**Problem:** isolate HTTP, application decisions and upstream communication.
-**Choice:** routes validate input and return responses; service functions transform/select characters; a fixed-origin client handles fetch, source validation, cache and timeouts. Dependencies are passed as functions for tests.
-**Cost:** more modules than a single handler. No generic repositories, base classes or DI container.
-**Production:** add layers only when distinct domains or persistence requirements appear.
+## 2. Separate HTTP, application logic and upstream access
 
-## Runtime contracts
+The backend follows **routes → character service → SWAPI client**:
 
-**Problem:** TypeScript cannot validate external JSON.
-**Choice:** Zod validates upstream fields and derives shared response types; the frontend validates our API responses. Fastify's built-in JSON Schema validates path parameters.
-**Cost:** two validation syntaxes serving different boundaries. Some repeated transformation fields are intentional: source and product contracts differ.
-**Production:** a public API could justify generated OpenAPI clients and versioning.
+- **Routes** validate request parameters and handle HTTP responses.
+- **The character service** transforms source records into the application's character model and selects individual records.
+- **The SWAPI client** handles external requests, source validation, timeouts and caching.
 
-## Collection, search and persistence
+I chose functions with explicit dependencies rather than classes, a dependency-injection framework or a generic repository layer. This keeps tests independent of live SWAPI and makes each module's responsibility clear. It creates more files than a single request handler, but gives changes a predictable home. Persistence or distinct business domains could justify additional boundaries later.
 
-**Problem:** the verified SWAPI collection is an array of 82 records; tested search/page parameters returned identical data.
-**Choice:** fetch/cache the collection, filter names in the browser, select details in the service. Extract IDs from validated URLs; preserve unknown source values. Successful source records are cached for five minutes with concurrent fetch sharing. No database because there are no writes or user-owned records.
-**Cost:** full-collection fetching, per-process cache and upstream dependence after expiry. No stale-on-error behaviour or automatic retries.
-**Production:** requirements for saved data, search scale or availability could justify persistence/shared caching and server-side pagination.
+## 3. Validate data at runtime and own the API contract
 
-## HTTP errors and security
+TypeScript provides compile-time checking; it cannot establish whether received JSON is valid. Zod validates SWAPI responses and defines shared, inferred API types. The frontend also validates successful responses before placing them in React state. Fastify's built-in JSON Schema support validates path parameters at the HTTP boundary.
 
-**Problem:** distinguish invalid input, missing data and upstream failures without leaking internals.
-**Choice:** safe error envelopes, 400/404/502/504/500 statuses, five-second upstream timeout and server-side diagnostics. Fixed upstream URLs prevent arbitrary proxying; React escapes source strings. Same-origin requests avoid development CORS configuration.
-**Cost:** a timeout requires explicit user retry. Logs need operational handling in production.
-**Production:** measured rate limits, appropriate security headers, monitoring and deployment-specific networking.
+The service maps SWAPI's snake-case fields and relationship URLs into a smaller camel-case response with explicit IDs and connection counts. That keeps upstream details out of components and preserves meaningful source values such as `unknown`.
 
-## Frontend responsibilities
+The cost is maintaining source and application schemas, plus two validation syntaxes with different responsibilities. For a larger public API, generated OpenAPI clients and a versioning policy would become useful.
 
-**Problem:** keep fetching, request lifecycle and rendering understandable.
-**Choice:** `services/archiveApi.ts` owns HTTP parsing/validation; `useResource` owns cancellation/retry and request state; feature components compose the UI. Query-parameter navigation supports links and browser history. React local state retains search during in-app navigation.
-**Cost:** small custom lifecycle code and manual navigation/focus management. Search is not reload-persistent, and returning resets revealed-card count. A full-page detail avoids modal focus-trapping complexity.
-**Production:** a router/query library becomes worthwhile as routes, relationships and mutations grow.
+## 4. Fetch a small collection, search locally and avoid a database
 
-## Component system and folders
+I based the data strategy on the actual API response. SWAPI returned a plain array of 82 characters; the tested search and pagination parameters returned the same collection. Filtering that small dataset in the browser gives immediate search results without extra requests.
 
-**Problem:** reflect the candidate's component-library experience while keeping the assessment navigable.
-**Choice:** requested `src/components/ui/<Primitive>/` and `src/components/features/characters/` hierarchy, plus dedicated `hooks`, `services`, `styles` and `assets`. All character photos live together under `src/assets/images/characters/`; a catalogue records ID, file and provenance. Tests are co-located, browser tests live in `e2e/`.
-**Composition:** typed Button/ButtonLink preserve native action/navigation behaviour; Card supplies a surface rather than deciding semantics; Container owns width; Typography separates visual style from heading level; HStack/VStack use spacing tokens; Badge and Skeleton serve real repeated patterns.
-**Cost:** indirection and extra files. Primitive options are deliberately small, and features keep their own content and image composition. No universal polymorphic API or empty type folders.
-**Production:** expand primitives when actual reuse/accessibility requirements appear; a larger cross-product library could justify Storybook and versioning.
+Character IDs come from validated resource URLs rather than array positions. Both API endpoints use the same collection, so detail requests do not need a separate upstream-fetching strategy.
 
-## Visual tokens, fonts and icons
+I chose not to introduce a database: there are no writes, accounts or user-owned records to persist. Fetching the entire collection would become unsuitable at greater scale. Saved records, stronger availability requirements or larger searchable datasets could justify persistence and server-side search/pagination.
 
-**Problem:** the candidate found the original dark grid too clunky and requested a more exciting, iOS-like experience.
-**Choice:** central palette/spacing/type/radius/shadow/motion tokens, local Outfit for readable UI, Barlow Condensed for the poster-inspired display title, and Google Material SVGs through React Icons. Visual review drove the final Google font/icon choices and removal of decorative icon clutter. Icons now support functional controls rather than filling every surface.
-**Cost:** asset bytes and token maintenance. Breakpoints use documented literal CSS media values because custom properties cannot drive media conditions. One-off composition dimensions/gradients remain feature-local.
-**Production:** subset fonts and optimise image delivery against measured performance targets.
+## 5. Bound upstream work and return predictable failures
 
-## Imagery and motion
+The SWAPI client applies a **five-second timeout**, caches successful validated records for **five minutes**, and shares in-flight requests. This limits repeated upstream calls while keeping the implementation small. Failed requests are not cached, so a later retry can recover.
 
-**Problem:** SWAPI has no portrait fields; the first screen needed more Star Wars atmosphere.
-**Choice:** named local portraits mapped by ID, a documented decorative AI-generated backdrop, lazy card images and graceful fallback initials. CSS provides an eight-second starfield/title/lightsaber opening on every fresh page load, staggered card entrances, hover/focus previews, portrait zoom and skeleton shimmer; reduced-motion preferences disable these effects.
-**Cost:** repository asset size, separate image provenance and third-party artwork rights considerations. This is visual enrichment, not a second data API. No motion framework or video download is needed. The opening is skippable by button or Escape, traps focus while the page is inert, and restores focus to main. In-app profile navigation does not replay it; refresh and new page loads do. Decorative blades across portrait faces were removed following candidate feedback.
-**Production:** use a rights-cleared asset pipeline and responsive image formats, measure loading performance, and evaluate the cost of an opening on repeat visits against measured user feedback; this every-entry behaviour is an explicit candidate preference.
+The API uses a consistent error envelope and distinguishes invalid requests (400), missing records (404), upstream failures or malformed data (502), timeouts (504) and unexpected failures (500). Diagnostic details stay in server logs. The interface provides an explicit retry action.
 
-## Tests and delivery
+The cache is process-local and does not serve stale data after expiry when refreshing fails. Those are deliberate limitations: shared caching, bounded automatic retries or a stale-on-error policy would require clearer availability and freshness requirements. Fixed upstream URLs also prevent the API becoming an arbitrary URL proxy. Production hosting would need appropriate rate limits, security headers and monitoring.
 
-**Problem:** verify important boundaries and make the result reproducible for reviewers.
-**Choice:** Vitest for backend/contracts/components/request races, Playwright for browser interactions and four viewport widths, and axe checks on browse/detail. Mock API data makes tests repeatable; live smoke checks stay separate. A GitHub Actions workflow runs install, tests, build and Chromium checks and preserves failures.
-**Cost:** browser installation and test maintenance. Automated accessibility checks do not replace assistive-technology review. The hosted workflow cannot be claimed passed until run on GitHub.
-**Test-first evidence:** the refreshed-opening test failed because the sequence did not replay; the preview test failed because no preview existed. Both requirements were then implemented. The animation check was run and failed with `animationName: none` before the entrance animation was implemented. Earlier work followed mixed implementation/testing order; do not describe the entire project as strict TDD.
-**Production:** broader browsers, observability, visual baselines and load testing should follow release risks, not test-count targets.
+## 6. Keep frontend state and fetching responsibilities small
+
+The frontend HTTP service handles requests, response parsing and validation. `useResource` handles loading, cancellation, errors and retry. Character components handle presentation and interactions. Cancelled or superseded requests cannot replace the active resource with an older result.
+
+I chose local React state instead of a global store. A query parameter provides shareable detail URLs and browser-history support without adding a routing framework. Search is retained during in-app navigation; it is not persisted across reloads, and returning to the collection resets the revealed-card count.
+
+A dedicated detail view makes mobile layout and navigation straightforward. The cost is manual URL and focus management. More routes, related-resource fetching or mutations would make a router and server-state library more valuable.
+
+## 7. Use a purposeful component system
+
+I wanted the frontend to reflect my experience translating a design system into reusable React Native components at ThinkMoney. I applied those principles through a small set of typed primitives and feature-specific compositions.
+
+`Button` and `ButtonLink` preserve native action/navigation semantics. `Card` provides a visual surface; `Container` controls content width; `Typography` separates heading level from appearance. Stacks, badges and skeletons address repeated layout and presentation needs. Character-specific behaviour stays under `src/components/features/characters/`.
+
+Tokens centralise colour, spacing, typography, radii, shadows and motion. Hooks, HTTP services, styles and assets have separate locations. Character images share one folder and an explicit ID/source catalogue.
+
+This adds some indirection, but gives reviewers a consistent structure and makes visual changes easier to apply. I avoided a universal component framework, atom/molecule directory tiers and speculative abstractions. A reusable library shared across products could justify separate packaging, Storybook and broader component contracts.
+
+## 8. Make visual polish support a usable product
+
+I chose a character-led Star Wars identity, locally hosted Google Fonts and one Google Material icon family. Local portrait assets avoid runtime dependence on an image host; cards lazy-load images and fall back to initials. Image provenance and the decorative AI-generated artwork are documented separately from API data.
+
+CSS provides the cinematic opening, card entrances and hover/focus previews without a motion framework or runtime video download. The opening can be skipped by button or Escape, manages focus while the rest of the page is inert, and respects reduced-motion preferences. It plays on fresh page loads; in-app character navigation does not replay it.
+
+The trade-offs are asset size and an opening that repeat visitors may prefer to skip. Production work would include image/font optimisation, a rights-cleared asset pipeline and usability/performance measurement. Essential information remains available through the character profile rather than depending on hover or animation.
+
+## 9. Verify boundaries and automate delivery
+
+I chose Vitest for API, transformation, component and request-lifecycle checks, and Playwright for the actual browser journey. Deterministic fixtures cover failures as well as successful responses. Browser checks include keyboard navigation, four viewport widths, opening behaviour, image fallbacks and hover/focus interactions. Automated accessibility scans supplement manual review.
+
+The GitHub Actions workflow runs installation, tests, type-checking/build and Chromium checks on pushes and pull requests. Browser failures retain traces and screenshots. A fresh-checkout installation/build and live API smoke check verify the reviewer setup independently of mocked tests.
+
+The test strategy targets meaningful regressions rather than a coverage percentage. Some interaction changes were developed test-first; the project uses a mix of implementation and testing sequences. Other browser engines, assistive-technology testing, visual baselines and load testing remain areas for future work.

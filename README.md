@@ -181,7 +181,7 @@ Open **[http://127.0.0.1:3001](http://127.0.0.1:3001)**. Fastify serves the buil
 
 ## Scope and trade-offs
 
-The core journey is deliberately focused on characters. Visual and interaction refinements were shaped through pairing; the application avoids a database, authentication and extra resource browsers.
+I prioritised a complete character-exploration journey, a consistent component system and clear backend boundaries. Additional resource browsers, authentication and persistence were deferred to keep the scope focused.
 
 Known limits: resolved homeworld/film names are deferred; search is not reload-persistent; returning to the collection retains search but resets the revealed-card count. The cache is process-local, with no stale-on-error policy, offline mode or automatic retries. Chromium is covered; other engines, load tests and a broader assistive-technology audit remain future work.
 
@@ -193,4 +193,4 @@ Data: [SWAPI](https://swapi.info/). Portraits: [Star Wars Gallery](https://githu
 
 Fonts: Google Fonts **Outfit** and **Barlow Condensed**, self-hosted with their licences. Icons: **Google Material Icons** through React Icons. The [decorative space artwork](src/assets/images/galaxy/README.md) was AI-generated; its prompt is recorded. The opening is CSS animation, with no runtime video download or audio.
 
-AI pairing supported planning, live API inspection, implementation, tests, documentation and decorative artwork. Product scope, visual direction, component structure and testing priorities were actively shaped by the candidate. Checks were executed during development. Some interaction requirements were developed test-first; the project does not claim universal TDD or unaided authorship.
+I set the product direction, selected the stack, and directed the component architecture, visual design and testing priorities. AI assistance supported implementation, API investigation, test development, documentation and decorative artwork. Reported checks were run during development and are backed by the GitHub Actions workflow.
