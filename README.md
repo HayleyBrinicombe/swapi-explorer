@@ -145,7 +145,7 @@ npm run test:e2e
 
 Playwright starts the development server automatically or reuses an existing local server. The tests use deterministic API fixtures; they do not depend on live SWAPI availability. Browser failures retain screenshots and traces in `test-results/`.
 
-**Locally verified:** 14 Vitest tests and 18 Playwright tests passed, along with type-checking and the production build.
+**Locally verified:** 14 Vitest tests and 18 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
 
 Coverage includes mapping, malformed/missing IDs, upstream failures and timeouts, cache expiry/concurrent calls, request races/cancellation, loading/error/retry, search, load more, direct links/history, portrait fallbacks, hover/focus previews, opening duration/refresh/replay, keyboard navigation and four viewport widths. Automated WCAG A/AA scans cover browse and detail; they supplement manual review rather than establish full accessibility conformance.
 
