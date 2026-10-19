@@ -3,6 +3,7 @@ import { MdPublic, MdMovie, MdRocketLaunch, MdRadar } from 'react-icons/md';
 import type { RelatedRecord } from '../../../../shared/contracts';
 import {
   getResourceImage,
+  getResourceImageCredit,
   type ResourceKind,
 } from '../../../assets/resourceImages';
 import { Card } from '../../ui/Card/Card';
@@ -18,6 +19,7 @@ export function ArchiveRecordCard({
   const Heading = headingLevel === 2 ? 'h2' : 'h4';
   const [failed, setFailed] = useState(false);
   const image = getResourceImage(kind, record.id);
+  const credit = getResourceImageCredit(kind, record.id);
   const Icon = {
     planets: MdPublic,
     films: MdMovie,
@@ -41,6 +43,9 @@ export function ArchiveRecordCard({
             <Icon size={40} aria-hidden="true" />
             <span>Image unavailable</span>
           </div>
+        )}
+        {image && !failed && credit && (
+          <span className="artwork-credit">{credit}</span>
         )}
       </div>
       <div className="connection-copy">

@@ -321,6 +321,15 @@
   },
   {
     "kind": "planets",
+    "id": "42",
+    "file": "42-haruun-kal.jpg",
+    "title": "HaruunKal.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:HaruunKal.jpg",
+    "image": "https://www.starwars.jp/wiki/images/9/98/HaruunKal.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "planets",
     "id": "43",
     "file": "43-cerea.jpg",
     "title": "Cerea",
@@ -361,6 +370,15 @@
   },
   {
     "kind": "planets",
+    "id": "57",
+    "file": "57-muunilinst.jpg",
+    "title": "Muunilinst.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Muunilinst.jpg",
+    "image": "https://www.starwars.jp/wiki/images/1/19/Muunilinst.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "planets",
     "id": "60",
     "file": "60-umbara.jpg",
     "title": "Umbara",
@@ -369,11 +387,51 @@
   },
   {
     "kind": "starships",
+    "id": "2",
+    "file": "2-alderaan-cruiser.jpg",
+    "title": "Alderaan Cruiser",
+    "page": "https://www.starwars.com/databank/alderaan-cruiser",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_alderaancruiser_01_169_c60ce268.jpeg?region=184%2C22%2C1281%2C721&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "3",
+    "file": "3-imperial-star-destroyer.jpg",
+    "title": "Imperial Star Destroyer",
+    "page": "https://www.starwars.com/databank/imperial-star-destroyer",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/Star-Destroyer_ab6b94bb.jpeg?region=0%2C0%2C1600%2C900&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "5",
+    "file": "5-imperial-sentinel-class-shuttle.jpg",
+    "title": "Imperial Sentinel-Class Shuttle",
+    "page": "https://www.starwars.com/databank/imperial-sentinel-class-shuttle",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/Imperial-Sentinel-Class-Shuttle_a2dc7d3b.jpeg?region=0%2C0%2C1596%2C898&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "9",
+    "file": "9-death-star.jpg",
+    "title": "Death Star",
+    "page": "https://www.starwars.com/databank/death-star",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/Death-Star-I-copy_36ad2500.jpeg?region=0%2C0%2C1600%2C900&width=640"
+  },
+  {
+    "kind": "starships",
     "id": "10",
     "file": "10-millennium-falcon.jpg",
     "title": "Millennium Falcon",
     "page": "https://www.starwars.com/databank/millennium-falcon",
     "image": "https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg?region=0%2C0%2C1280%2C720&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "11",
+    "file": "11-y-wing-starfighter.jpg",
+    "title": "Y-wing Starfighter",
+    "page": "https://www.starwars.com/databank/y-wing-starfighter",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/y-wing-main_1eac4125.jpeg?region=0%2C132%2C1920%2C1080&width=640"
   },
   {
     "kind": "starships",
@@ -393,6 +451,22 @@
   },
   {
     "kind": "starships",
+    "id": "15",
+    "file": "15-super-star-destroyer.jpg",
+    "title": "Super Star Destroyer",
+    "page": "https://www.starwars.com/databank/super-star-destroyer",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_superstardestroyer_01_169_d5757b90.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "17",
+    "file": "17-rebel-transport.jpg",
+    "title": "GR-75 Medium Transport",
+    "page": "https://www.starwars.com/databank/gr-75-medium-transport",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/gr-75-medium-transport_cd04862d.jpeg?region=15%2C0%2C770%2C433&width=640"
+  },
+  {
+    "kind": "starships",
     "id": "21",
     "file": "21-slave-i.jpg",
     "title": "Boba Fett&#x27;s starship",
@@ -406,6 +480,22 @@
     "title": "Imperial Shuttle",
     "page": "https://www.starwars.com/databank/imperial-shuttle",
     "image": "https://lumiere-a.akamaihd.net/v1/images/veh_ia_1752_040381b2.jpeg?region=0%2C70%2C1280%2C720&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "23",
+    "file": "23-nebulon-b-frigate.jpg",
+    "title": "Nebulon-B Frigate",
+    "page": "https://www.starwars.com/databank/nebulon-b-frigate",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/nebulon-b-frigate_dce53bc2.jpeg?region=0%2C0%2C1181%2C664&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "27",
+    "file": "27-mon-calamari-star-cruiser.jpg",
+    "title": "Mon Calamari Star Cruiser",
+    "page": "https://www.starwars.com/databank/mon-calamari-star-cruiser",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/e6d_ia_2581_47f64de7.jpeg?region=254%2C0%2C1426%2C802&width=640"
   },
   {
     "kind": "starships",
@@ -425,6 +515,22 @@
   },
   {
     "kind": "starships",
+    "id": "31",
+    "file": "31-republic-cruiser.jpg",
+    "title": "Republic Cruiser",
+    "page": "https://www.starwars.com/databank/republic-cruiser",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_republiccruiser_01_169_fd769e33.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "32",
+    "file": "32-trade-federation-battleship.jpg",
+    "title": "Trade Federation Battleship",
+    "page": "https://www.starwars.com/databank/trade-federation-battleship",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_tradefederationbattleship_01_169_fc5458ce.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "starships",
     "id": "39",
     "file": "39-naboo-n-1-starfighter.jpg",
     "title": "Naboo N-1 Starfighter",
@@ -438,6 +544,30 @@
     "title": "Naboo Royal Starship",
     "page": "https://www.starwars.com/databank/naboo-royal-starship",
     "image": "https://lumiere-a.akamaihd.net/v1/images/databank_nabooroyalstarship_01_169_e61f677e.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "41",
+    "file": "41-sith-infiltrator.jpg",
+    "title": "Sith Infiltrator",
+    "page": "https://www.starwars.com/databank/sith-infiltrator",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_sithinfiltrator_01_169_1bd0a638.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "43",
+    "file": "43-naboo-royal-cruiser.jpg",
+    "title": "Naboo Royal Cruiser",
+    "page": "https://www.starwars.com/databank/naboo-royal-cruiser",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/naboo-royal-cruiser_70fa0ac3.jpeg?region=191%2C0%2C1179%2C663&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "47",
+    "file": "47-aa-9-coruscant-freighter.jpg",
+    "title": "AA-9 Coruscant freighter",
+    "page": "https://www.starwars.com/databank/aa-9-coruscant-freighter",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665&width=640"
   },
   {
     "kind": "starships",
@@ -457,11 +587,54 @@
   },
   {
     "kind": "starships",
+    "id": "52",
+    "file": "52-republic-assault-ship.jpg",
+    "title": "Acclamator.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Acclamator.jpg",
+    "image": "https://www.starwars.jp/wiki/images/4/4b/Acclamator.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "starships",
+    "id": "58",
+    "file": "58-solar-sailer.jpg",
+    "title": "Solar Sailer",
+    "page": "https://www.starwars.com/databank/solar-sailer",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_geonosiansolarsailer_01_169_b3873578.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "starships",
     "id": "59",
     "file": "59-invisible-hand.jpg",
     "title": "Invisible Hand",
     "page": "https://www.starwars.com/databank/invisible-hand",
     "image": "https://lumiere-a.akamaihd.net/v1/images/ep3_ia_92707_3bbabe59.jpeg?region=573%2C0%2C1347%2C758&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "61",
+    "file": "61-theta-class-shuttle.jpg",
+    "title": "Theta-class_T-2c_shuttle.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Theta-class_T-2c_shuttle.jpg",
+    "image": "https://www.starwars.jp/wiki/images/c/c5/Theta-class_T-2c_shuttle.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "starships",
+    "id": "63",
+    "file": "63-republic-attack-cruiser.jpg",
+    "title": "Republic Attack Cruiser",
+    "page": "https://www.starwars.com/databank/republic-attack-cruiser",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_republicattackcruiser_01_169_812f153d.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "64",
+    "file": "64-naboo-star-skiff.jpg",
+    "title": "Naboo_star_skiff.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Naboo_star_skiff.jpg",
+    "image": "https://www.starwars.jp/wiki/images/8/85/Naboo_star_skiff.jpg",
+    "credit": "Reference artwork · StarWars.jp"
   },
   {
     "kind": "starships",
@@ -481,11 +654,28 @@
   },
   {
     "kind": "starships",
+    "id": "68",
+    "file": "68-banking-clan-frigate.jpg",
+    "title": "Munificent-class_star_frigate.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Munificent-class_star_frigate.jpg",
+    "image": "https://www.starwars.jp/wiki/images/1/1b/Munificent-class_star_frigate.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "starships",
     "id": "74",
     "file": "74-soulless-one.jpg",
     "title": "Soulless One",
     "page": "https://www.starwars.com/databank/soulless-one",
     "image": "https://lumiere-a.akamaihd.net/v1/images/databank_soullessone_01_169_08305d9b.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "starships",
+    "id": "75",
+    "file": "75-v-wing-fighter.jpg",
+    "title": "V-wing Fighter",
+    "page": "https://www.starwars.com/databank/v-wing-fighter",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/v-wing-main_37a7dec1.jpeg?region=237%2C0%2C1445%2C813&width=640"
   },
   {
     "kind": "vehicles",
@@ -649,6 +839,24 @@
   },
   {
     "kind": "vehicles",
+    "id": "44",
+    "file": "44-zephyr-g-swoop.jpg",
+    "title": "Zephyr-G.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Zephyr-G.jpg",
+    "image": "https://www.starwars.jp/wiki/images/9/98/Zephyr-G.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "vehicles",
+    "id": "45",
+    "file": "45-koro-2-exodrive.jpg",
+    "title": "Koro-2.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Koro-2.jpg",
+    "image": "https://www.starwars.jp/wiki/images/d/dd/Koro-2.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "vehicles",
     "id": "46",
     "file": "46-xj-6-airspeeder.jpg",
     "title": "XJ-6 Airspeeder",
@@ -662,6 +870,15 @@
     "title": "Republic Attack Gunship",
     "page": "https://www.starwars.com/databank/republic-attack-gunship",
     "image": "https://lumiere-a.akamaihd.net/v1/images/republic-attack-gunship-main_6dc2f24e.jpeg?region=237%2C0%2C1445%2C813&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "51",
+    "file": "51-laat-c-carrier.jpg",
+    "title": "LAATC.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:LAATC.jpg",
+    "image": "https://www.starwars.jp/wiki/images/c/cd/LAATC.jpg",
+    "credit": "Reference artwork · StarWars.jp"
   },
   {
     "kind": "vehicles",
@@ -713,11 +930,47 @@
   },
   {
     "kind": "vehicles",
+    "id": "62",
+    "file": "62-emergency-firespeeder.jpg",
+    "title": "Emergency_firespeeder.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Emergency_firespeeder.jpg",
+    "image": "https://www.starwars.jp/wiki/images/a/ab/Emergency_firespeeder.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "vehicles",
+    "id": "67",
+    "file": "67-droid-tri-fighter.jpg",
+    "title": "Tri-fighter_over_Coruscant.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Tri-fighter_over_Coruscant.jpg",
+    "image": "https://www.starwars.jp/wiki/images/1/19/Tri-fighter_over_Coruscant.jpg",
+    "credit": "Reference artwork · StarWars.jp"
+  },
+  {
+    "kind": "vehicles",
     "id": "69",
     "file": "69-wookiee-catamaran.jpg",
     "title": "Wookiee Catamaran",
     "page": "https://www.starwars.com/databank/wookiee-catamaran",
     "image": "https://lumiere-a.akamaihd.net/v1/images/wookiee-catamaran_ae2deacf.jpeg?region=70%2C0%2C1181%2C665&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "70",
+    "file": "70-raddaugh-gnasp-fluttercraft.jpg",
+    "title": "Raddaugh Gnasp Fluttercraft",
+    "page": "https://www.swcombine.com/rules/?Speeders&ID=72",
+    "image": "https://images.swcombine.com/vehicles/72/large.jpg",
+    "credit": "Community render · Star Wars Combine"
+  },
+  {
+    "kind": "vehicles",
+    "id": "71",
+    "file": "71-clone-turbo-tank.jpg",
+    "title": "Juggernaut.jpg",
+    "page": "https://www.starwars.jp/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Juggernaut.jpg",
+    "image": "https://www.starwars.jp/wiki/images/8/8a/Juggernaut.jpg",
+    "credit": "Reference artwork · StarWars.jp"
   },
   {
     "kind": "vehicles",

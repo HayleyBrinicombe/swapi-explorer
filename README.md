@@ -156,7 +156,7 @@ npm run test:e2e
 
 Playwright starts the development server automatically or reuses an existing local server. The tests use deterministic API fixtures; they do not depend on live SWAPI availability. Browser failures retain screenshots and traces in `test-results/`.
 
-**Locally verified:** 23 Vitest tests and 28 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
+**Locally verified:** 23 Vitest tests and 30 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
 
 **Live deployment verified:** anonymous browser checks covered browsing, search, character details, refresh, mobile width and image loading. Live API checks confirmed successful responses, invalid input (400) and missing records (404).
 
@@ -224,7 +224,7 @@ Production requirements could justify server-side search/pagination, persistence
 
 ## Credits and AI-assisted development
 
-Data: [SWAPI](https://swapi.info/). Related-resource images: official [Star Wars Databank and film pages](src/assets/images/README.md), with a [source catalogue](src/assets/images/resources.json). Portraits: [Star Wars Gallery](https://github.com/vieraboschkova/swapi-gallery), with an explicit [local source catalogue](src/assets/images/characters/README.md). SWAPI itself has no portrait fields. Star Wars imagery belongs to its respective rights holders; this fan project claims no ownership or open licence to that artwork.
+Data: [SWAPI](https://swapi.info/). Related-resource images: official Star Wars pages and credited specialist references, documented in the [image sources](src/assets/images/README.md) and [source catalogue](src/assets/images/resources.json). Portraits: [Star Wars Gallery](https://github.com/vieraboschkova/swapi-gallery), with an explicit [local source catalogue](src/assets/images/characters/README.md). SWAPI itself has no portrait fields. Star Wars imagery belongs to its respective rights holders; this fan project claims no ownership or open licence to that artwork.
 
 Fonts: Google Fonts **Outfit** and **Barlow Condensed**, self-hosted with their licences. Icons: **Google Material Icons** through React Icons. The [decorative space artwork](src/assets/images/galaxy/README.md) was AI-generated; its prompt is recorded. The opening is CSS animation, with no runtime video download or audio.
 

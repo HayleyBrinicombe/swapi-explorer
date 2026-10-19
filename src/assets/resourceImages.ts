@@ -18,3 +18,16 @@ const images = new Map(
 export function getResourceImage(kind: ResourceKind, id: string) {
   return images.get(`${kind}/${id}`);
 }
+
+const credits = new Map(
+  catalogue.map((record) => [
+    `${record.kind}/${record.id}`,
+    'credit' in record ? record.credit : undefined,
+  ]),
+);
+export function getResourceImageCredit(
+  kind: ResourceKind,
+  id: string,
+): string | undefined {
+  return credits.get(`${kind}/${id}`);
+}
