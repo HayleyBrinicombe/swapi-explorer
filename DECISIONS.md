@@ -85,3 +85,11 @@ This avoids a separate backend hostname, CORS configuration, a framework migrati
 The trade-off is a platform-specific entry point and function lifecycle: each warm instance has its own cache, and a cold start resets it. There are no background jobs or persistent connections in this application, so that limitation is appropriate. A long-running Node host would be an alternative if future requirements needed persistent processes.
 
 The production URL is linked from the README and repository homepage. Anonymous browser checks verified browsing, search, detail navigation, refresh, mobile width and image loading against the deployed application. Live API checks verified successful, invalid-ID and missing-record responses. The initial deployment uses the Vercel CLI; connecting GitHub for automatic deployments remains a separate setup step. Passing GitHub Actions checks alone does not publish a new deployment.
+
+## 11. Load related records independently of the biography
+
+I kept the core character response small and added a separate connections endpoint for homeworld details, film titles and named craft. This lets the biography render while related data loads, with its own error and retry state. A combined response would save one browser request but couple profile availability to four additional upstream collections.
+
+The backend resolves validated relationship URLs against fixed SWAPI collections. It never fetches a URL supplied by a browser or upstream record. Each collection shares the existing timeout, cache and in-flight request policy; collections without relevant film or craft links are skipped. Fetching whole collections is reasonable for this small dataset but would need reconsideration as the source grows.
+
+Local image catalogues associate resource IDs with verified artwork and source credits. Coverage is partial, with category icons for missing artwork. A related-data failure currently affects the whole connections section; individual group recovery would be a possible refinement.

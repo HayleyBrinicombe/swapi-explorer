@@ -19,6 +19,7 @@ const upstream = vi.fn().mockImplementation(
           skin_color: 'fair',
           eye_color: 'blue',
           url: 'https://swapi.info/api/people/1',
+          homeworld: 'https://swapi.info/api/planets/1',
           films: [],
           starships: [],
           vehicles: [],

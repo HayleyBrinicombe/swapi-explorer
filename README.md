@@ -61,7 +61,7 @@ nvm use
 ## What you can explore
 
 - **Browse and discover:** portrait cards, instant name search, result counts and Load more.
-- **Open a character profile:** shareable URLs, biographical details and film, vehicle and starship connection counts.
+- **Open a character profile:** shareable URLs, biographical details, homeworld facts, film appearances and named starships/vehicles with local imagery.
 - **Feel the atmosphere:** an eight-second opening, dramatic typography and red/blue lighting. Skip with the button or Escape; replay from the footer. Fresh page loads replay the opening.
 - **Interact with the collection:** card depth, portrait zoom and height/mass previews on hover or keyboard focus.
 - **Use it across devices:** responsive layouts, labelled search, a skip link, visible focus, skeletons, helpful errors and reduced-motion support.
@@ -91,7 +91,7 @@ flowchart LR
 
 **Why local search?** The verified SWAPI people endpoint returns a plain array of 82 records. The tested search/page parameters returned the same full collection. Fetching this small collection once and filtering names locally gives immediate results.
 
-**Why no database?** The application reads public source data and has no user-owned records or writes to persist. The client keeps a five-minute process-local cache and shares concurrent requests; a five-second timeout bounds upstream waits. Failed requests are not cached.
+**Why no database?** The application reads public source data and has no user-owned records or writes to persist. The upstream client keeps a five-minute process-local cache per collection and shares concurrent requests; a five-second timeout bounds upstream waits. Failed requests are not cached.
 
 ### API
 
@@ -99,6 +99,7 @@ flowchart LR
 | ------------------------- | ----------------------------- |
 | `GET /api/characters`     | `{ characters: Character[] }` |
 | `GET /api/characters/:id` | `{ character: Character }`    |
+| `GET /api/characters/:id/connections` | `{ homeworld, films, starships, vehicles }` |
 
 IDs come from validated source URLs, not array positions. API IDs must be positive integers of at most six digits. Errors use `{ error: { code, message } }`: **400** invalid input, **404** missing record, **502** upstream HTTP/network/schema failure, **504** upstream timeout and **500** unexpected failure. Diagnostics stay in server logs.
 
@@ -119,7 +120,8 @@ src/
 server/
   app.ts                    Routes, request validation and error responses
   characters.ts             Character service and data transformation
-  swapi.ts                  Source client, validation, timeout and cache
+  connections.ts            Resolve homeworld, films and craft relationships
+  swapi.ts                  Source clients, validation, timeout and per-collection cache
   index.ts                  Startup and production static serving
 shared/contracts.ts         Runtime schemas and TypeScript API contracts
 e2e/                        Playwright journeys and deterministic fixtures
@@ -149,7 +151,7 @@ npm run test:e2e
 
 Playwright starts the development server automatically or reuses an existing local server. The tests use deterministic API fixtures; they do not depend on live SWAPI availability. Browser failures retain screenshots and traces in `test-results/`.
 
-**Locally verified:** 16 Vitest tests and 18 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
+**Locally verified:** 19 Vitest tests and 21 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
 
 **Live deployment verified:** anonymous browser checks covered browsing, search, character details, refresh, mobile width and image loading. Live API checks confirmed successful responses, invalid input (400) and missing records (404).
 
@@ -204,13 +206,13 @@ The initial production deployment was published with the Vercel CLI. GitHub Acti
 
 I prioritised a complete character-exploration journey, a consistent component system and clear backend boundaries. Additional resource browsers, authentication and persistence were deferred to keep the scope focused.
 
-Known limits: resolved homeworld/film names are deferred; search is not reload-persistent; returning to the collection retains search but resets the revealed-card count. The cache is process-local, with no stale-on-error policy, offline mode or automatic retries. Chromium is covered; other engines, load tests and a broader assistive-technology audit remain future work.
+Known limits: separate resource browsers and species details are deferred; related-image coverage is partial; search is not reload-persistent; returning to the collection retains search but resets the revealed-card count. The cache is process-local, with no stale-on-error policy, offline mode or automatic retries. Chromium is covered; other engines, load tests and a broader assistive-technology audit remain future work.
 
 Production requirements could justify server-side search/pagination, persistence for saved records, shared caching, a router/query library, responsive image formats and operational monitoring. The hosted configuration sets content-type and referrer security headers; rate limiting and a broader security policy remain future work.
 
 ## Credits and AI-assisted development
 
-Data: [SWAPI](https://swapi.info/). Portraits: [Star Wars Gallery](https://github.com/vieraboschkova/swapi-gallery), with an explicit [local source catalogue](src/assets/images/characters/README.md). SWAPI itself has no portrait fields. Star Wars imagery belongs to its respective rights holders; this fan project claims no ownership or open licence to that artwork.
+Data: [SWAPI](https://swapi.info/). Related-resource images: official [Star Wars Databank and film pages](src/assets/images/README.md), with a [source catalogue](src/assets/images/resources.json). Portraits: [Star Wars Gallery](https://github.com/vieraboschkova/swapi-gallery), with an explicit [local source catalogue](src/assets/images/characters/README.md). SWAPI itself has no portrait fields. Star Wars imagery belongs to its respective rights holders; this fan project claims no ownership or open licence to that artwork.
 
 Fonts: Google Fonts **Outfit** and **Barlow Condensed**, self-hosted with their licences. Icons: **Google Material Icons** through React Icons. The [decorative space artwork](src/assets/images/galaxy/README.md) was AI-generated; its prompt is recorded. The opening is CSS animation, with no runtime video download or audio.
 

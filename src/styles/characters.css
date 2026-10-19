@@ -797,3 +797,121 @@
     animation: none !important;
   }
 }
+
+.character-connections {
+  margin-top: var(--space-16);
+  padding-top: var(--space-10);
+  border-top: 1px solid var(--color-border);
+}
+.character-connections > h2 {
+  font-size: clamp(var(--font-title), 5vw, var(--space-12));
+  margin: var(--space-2) 0 var(--space-8);
+}
+.connection-section {
+  margin-block: var(--space-8);
+}
+.connection-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-xl);
+}
+.connection-section-title svg {
+  color: var(--color-saber-blue);
+}
+.connection-section-title span {
+  color: var(--color-muted);
+  font-size: var(--font-base);
+}
+.connection-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: var(--space-5);
+}
+.connection-grid li {
+  min-width: 0;
+}
+.connection-card {
+  overflow: hidden;
+  height: 100%;
+}
+.connection-image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    var(--color-gold-surface),
+    var(--color-background)
+  );
+  display: grid;
+  place-items: center;
+  color: var(--color-archive-gold);
+}
+.connection-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-image);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .connection-card:hover .connection-image img {
+    transform: scale(1.04);
+  }
+}
+.connection-copy {
+  padding: var(--space-5);
+}
+.connection-copy h4 {
+  margin: var(--space-2) 0 var(--space-4);
+  font-size: var(--font-xl);
+}
+.connection-copy .eyebrow {
+  overflow-wrap: anywhere;
+}
+.connection-copy dl {
+  margin: 0;
+}
+.connection-copy dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-2);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-sm);
+}
+.connection-copy dt {
+  color: var(--color-muted);
+}
+.connection-copy dd {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.connection-card--planets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.connection-card--planets .connection-image {
+  aspect-ratio: auto;
+  min-height: 220px;
+}
+.connection-card--planets h4 {
+  font-size: var(--font-title);
+}
+@media (max-width: 600px) {
+  .connection-card--planets {
+    grid-template-columns: 1fr;
+  }
+  .connection-card--planets .connection-image {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+}
+
+.connection-card--films .connection-image {
+  aspect-ratio: 2 / 3;
+}

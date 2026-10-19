@@ -25,3 +25,18 @@ export type ApiErrorCode =
   | 'UPSTREAM_TIMEOUT'
   | 'INTERNAL_ERROR';
 export type ApiError = { error: { code: ApiErrorCode; message: string } };
+
+export const relatedRecordSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  subtitle: z.string(),
+  facts: z.array(z.object({ label: z.string(), value: z.string() })),
+});
+export const characterConnectionsSchema = z.object({
+  homeworld: relatedRecordSchema.nullable(),
+  films: z.array(relatedRecordSchema),
+  starships: z.array(relatedRecordSchema),
+  vehicles: z.array(relatedRecordSchema),
+});
+export type RelatedRecord = z.infer<typeof relatedRecordSchema>;
+export type CharacterConnections = z.infer<typeof characterConnectionsSchema>;

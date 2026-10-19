@@ -1,3 +1,4 @@
+import { CharacterConnections } from './CharacterConnections';
 import { formatMeasurement } from './characterFormatting';
 import { Card } from '../../ui/Card/Card';
 import { MdChevronLeft } from 'react-icons/md';
@@ -83,12 +84,13 @@ export function CharacterDetail({
               ))}
             </dl>
             <p className="source-note">
-              Connections reflect the original SWAPI records. Related-resource
-              browsing is outside this edition of the archive.
+              Explore the homeworld, films and craft connected to this character
+              below.
             </p>
           </Card>
         </aside>
       </div>
+      <CharacterConnections key={c.id} id={c.id} />
     </section>
   );
 }

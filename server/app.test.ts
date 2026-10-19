@@ -12,6 +12,7 @@ const person = {
   skin_color: 'fair',
   eye_color: 'blue',
   url: 'https://swapi.info/api/people/1',
+  homeworld: 'https://swapi.info/api/planets/1',
   films: ['https://swapi.info/api/films/1'],
   vehicles: [],
   starships: [],

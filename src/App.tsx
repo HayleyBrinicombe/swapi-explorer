@@ -67,7 +67,7 @@ export function App() {
               <MdRocketLaunch size={28} />
             </span>
             <span>
-              Galactic<span className="brand-subtitle">Archive</span>
+              Galactic <span className="brand-subtitle">Archive</span>
             </span>
           </a>
           <nav aria-label="Main navigation">
