@@ -210,7 +210,7 @@ Production requirements could justify server-side search/pagination, persistence
 
 ## Credits and AI-assisted development
 
-Data: [SWAPI](https://swapi.info/). Portraits: [Star Wars Gallery](https://github.com/vieraboschkova/swapi-gallery), with an explicit [local source catalogue](src/assets/images/characters/README.md). SWAPI itself has no portrait fields. Star Wars imagery belongs to its respective rights holders; this fan assessment claims no ownership or open licence to that artwork.
+Data: [SWAPI](https://swapi.info/). Portraits: [Star Wars Gallery](https://github.com/vieraboschkova/swapi-gallery), with an explicit [local source catalogue](src/assets/images/characters/README.md). SWAPI itself has no portrait fields. Star Wars imagery belongs to its respective rights holders; this fan project claims no ownership or open licence to that artwork.
 
 Fonts: Google Fonts **Outfit** and **Barlow Condensed**, self-hosted with their licences. Icons: **Google Material Icons** through React Icons. The [decorative space artwork](src/assets/images/galaxy/README.md) was AI-generated; its prompt is recorded. The opening is CSS animation, with no runtime video download or audio.
 

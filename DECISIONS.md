@@ -1,19 +1,6 @@
 # Engineering decisions
 
-My priority was a complete, polished character-exploration journey with clear application boundaries and a straightforward developer setup. I chose a small full-stack architecture that makes validation, data flow and failure handling easy to explain and test.
-
-## My priorities and the decisions they informed
-
-| My priority | Decision and reasoning | Cost I accepted |
-| --- | --- | --- |
-| Make the assessment easy to try and review | One repository, one local startup command, and a same-origin hosting configuration for the frontend and API | A small platform-specific deployment adapter |
-| Demonstrate backend engineering clearly | Separate HTTP handling, character transformation and upstream access, with shared validated contracts | More boundaries than a frontend-only explorer needs |
-| Build on my component-library experience | Typed, composable UI primitives, central design tokens and separate character features | Some indirection when navigating components |
-| Give the product a memorable identity | Character imagery, a cinematic opening and purposeful interaction states | More asset weight and motion to manage accessibly |
-| Keep the scope explainable and maintainable | Local state and search, a small cache, and no database | A design intended for this small read-only dataset |
-| Make changes safe to review and deliver | Boundary-focused tests, browser journeys and GitHub Actions | Test maintenance and Chromium-only browser coverage |
-
-These choices reflect the product direction and engineering priorities I set for the assessment. AI supported implementation and investigation, as acknowledged in the README. The sections below explain the alternatives and limitations I would discuss in a technical review; they do not imply that every choice is appropriate for a larger production system.
+Galactic Archive uses a small full-stack architecture for browsing public Star Wars character data. These notes explain the main technical choices and their limitations.
 
 ## 1. React and Fastify with one root package
 
@@ -53,7 +40,7 @@ The SWAPI client applies a **five-second timeout**, caches successful validated 
 
 The API uses a consistent error envelope and distinguishes invalid requests (400), missing records (404), upstream failures or malformed data (502), timeouts (504) and unexpected failures (500). Diagnostic details stay in server logs. The interface provides an explicit retry action.
 
-The cache is process-local and does not serve stale data after expiry when refreshing fails. Those are deliberate limitations: shared caching, bounded automatic retries or a stale-on-error policy would require clearer availability and freshness requirements. Fixed upstream URLs also prevent the API becoming an arbitrary URL proxy. Production hosting would need appropriate rate limits, security headers and monitoring.
+The cache is process-local and does not serve stale data after expiry when refreshing fails. Those are deliberate limitations: shared caching, bounded automatic retries or a stale-on-error policy would require clearer availability and freshness requirements. Fixed upstream URLs also prevent the API becoming an arbitrary URL proxy. The deployment sets content-type and referrer security headers; rate limiting and operational monitoring remain future work.
 
 ## 6. Keep frontend state and fetching responsibilities small
 
@@ -65,13 +52,13 @@ A dedicated detail view makes mobile layout and navigation straightforward. The 
 
 ## 7. Use a purposeful component system
 
-I wanted the frontend to reflect my experience translating a design system into reusable React Native components at ThinkMoney. I applied those principles through a small set of typed primitives and feature-specific compositions.
+I chose a small set of typed UI primitives and feature-specific compositions to keep styling consistent and components easy to maintain.
 
 `Button` and `ButtonLink` preserve native action/navigation semantics. `Card` provides a visual surface; `Container` controls content width; `Typography` separates heading level from appearance. Stacks, badges and skeletons address repeated layout and presentation needs. Character-specific behaviour stays under `src/components/features/characters/`.
 
 Tokens centralise colour, spacing, typography, radii, shadows and motion. Hooks, HTTP services, styles and assets have separate locations. Character images share one folder and an explicit ID/source catalogue.
 
-This adds some indirection, but gives reviewers a consistent structure and makes visual changes easier to apply. I avoided a universal component framework, atom/molecule directory tiers and speculative abstractions. A reusable library shared across products could justify separate packaging, Storybook and broader component contracts.
+This adds some indirection, but gives contributors a consistent structure and makes visual changes easier to apply. I avoided a universal component framework, atom/molecule directory tiers and speculative abstractions. A reusable library shared across products could justify separate packaging, Storybook and broader component contracts.
 
 ## 8. Make visual polish support a usable product
 
@@ -85,13 +72,13 @@ The trade-offs are asset size and an opening that repeat visitors may prefer to 
 
 I chose Vitest for API, transformation, component and request-lifecycle checks, and Playwright for the actual browser journey. Deterministic fixtures cover failures as well as successful responses. Browser checks include keyboard navigation, four viewport widths, opening behaviour, image fallbacks and hover/focus interactions. Automated accessibility scans supplement manual review.
 
-The GitHub Actions workflow runs installation, tests, type-checking/build and Chromium checks on pushes and pull requests. Browser failures retain traces and screenshots. A fresh-checkout installation/build and live API smoke check verify the reviewer setup independently of mocked tests.
+The GitHub Actions workflow runs installation, tests, type-checking/build and Chromium checks on pushes and pull requests. Browser failures retain traces and screenshots. A fresh-checkout installation/build and live API smoke check verify setup independently of mocked tests.
 
-The test strategy targets meaningful regressions rather than a coverage percentage. Some interaction changes were developed test-first; the project uses a mix of implementation and testing sequences. Other browser engines, assistive-technology testing, visual baselines and load testing remain areas for future work.
+The test strategy targets meaningful regressions rather than a coverage percentage. Other browser engines, assistive-technology testing, visual baselines and load testing remain areas for future work.
 
 ## 10. Host the complete application behind one public URL
 
-A source-code repository and a recording let reviewers inspect the work, but a hosted application lets them try it immediately. I chose a Vercel deployment configuration that keeps the existing React and Fastify architecture: static frontend assets are served from the build output, while a small HTTP entry point forwards API requests into the same Fastify app.
+I chose Vercel to provide a publicly accessible application while retaining the existing React and Fastify architecture: static frontend assets are served from the build output, while a small HTTP entry point forwards API requests into the same Fastify app.
 
 This avoids a separate backend hostname, CORS configuration, a framework migration or a second implementation of the character API. The local development and standalone production commands continue to work. Tests exercise real HTTP requests through the hosted entry point, including validation, missing records and cache sharing.
 
