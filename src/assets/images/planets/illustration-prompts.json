@@ -1,0 +1,115 @@
+{
+  "generator": "Built-in image_gen",
+  "created": "2026-10-19",
+  "note": "Speculative artist\u2019s impressions, not canonical reference artwork. Displayed facts come from SWAPI.",
+  "illustrations": [
+    {
+      "id": "26",
+      "name": "Bestine IV",
+      "file": "26-bestine-iv-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: landscape illustration for a premium dark sci-fi planetary archive card. Create one beautiful wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Bestine IV. SWAPI describes temperate climate and rocky islands surrounded by oceans, surface water 98 percent. Show a dramatic expanse of deep blue ocean with a few rugged small rocky islands, distant mist, elegant warm sunset rim light against cool navy atmosphere. Rich photographic textures, professional film concept art, restrained vivid blue and amber colour, strong readable composition at thumbnail size. No text, labels, logos, borders, people, spacecraft, famous landmarks or identifiable franchise buildings. This is an imaginative illustration informed by sparse data, not canonical reference artwork. Generate exactly one standalone scene."
+    },
+    {
+      "id": "30",
+      "name": "Socorro",
+      "file": "30-socorro-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Socorro. SWAPI: arid climate; deserts and mountains. An expansive ochre desert with wind-carved dark rock mountain ranges, distant dunes and atmospheric warm gold sunset, cinematic cool shadows. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "39",
+      "name": "Vulpter",
+      "file": "39-vulpter-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Vulpter. SWAPI: temperate and arctic climate; urban and barren terrain. A vast cold futuristic city skyline on a barren rocky plain, frost in the foreground, steel-blue atmosphere and restrained warm amber windows. Generic imagined architecture, no recognizable Star Wars buildings. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "38",
+      "name": "Aleen Minor",
+      "file": "38-aleen-minor-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Aleen Minor. SWAPI terrain and climate unknown. A distant, ambiguous planetary horizon through luminous mist, abstract layered cloud veils and soft blue-violet rim light. No defined cities, oceans, landmarks or creatures; an imaginative atmospheric scene without claiming specific geography. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "28",
+      "name": "unknown",
+      "file": "28-unidentified-world-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Unidentified world. SWAPI gives no name, terrain or climate. A deliberately ambiguous atmospheric silhouette of a distant uncharted world half hidden by dark navy nebula mist and faint stars. Do not depict definite oceans, cities or named landmarks. Muted blue-violet rim light. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "45",
+      "name": "Iridonia",
+      "file": "45-iridonia-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Iridonia. SWAPI terrain: rocky canyons and acid pools; climate unknown. An imposing ochre canyon landscape with luminous pale green mineral pools in sheltered basins, layered rock textures and distant haze. Atmospheric amber and subtle emerald tones. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "46",
+      "name": "Tholoth",
+      "file": "46-tholoth-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Tholoth. SWAPI terrain and climate are unknown. A deliberately speculative remote planetary horizon partially veiled by dense silver mist, muted teal dusk and a soft amber edge of sunlight. Suggest scale and atmosphere without recognizable geography, cities or specific biomes. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "41",
+      "name": "Tund",
+      "file": "41-tund-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Tund. SWAPI terrain: barren land and ash; climate unknown. A beautiful austere ash-covered plain with eroded dark ridges and drifting pale ash mist, dramatic crimson-orange light on the far horizon, cool charcoal foreground. No active eruption is required. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "40",
+      "name": "Troiken",
+      "file": "40-troiken-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Troiken. SWAPI terrain: desert, tundra, rainforests and mountains, climate unknown. A dramatic wide valley transitioning from rocky mountain foothills to a dark green rainforest, dry golden rock terraces and distant snow-touched peaks. Cool mist and warm side light; suggest diverse biomes without crowding the composition. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "47",
+      "name": "Iktotch",
+      "file": "47-iktotch-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Iktotch. SWAPI climate: arid, rocky and windy; rocky terrain. A windswept plateau of rugged red-brown stone pillars, airborne sand and immense mountain silhouettes, dramatic cool storm clouds with thin amber light. Crisp weathered rock textures. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "48",
+      "name": "Quermia",
+      "file": "48-quermia-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Quermia. SWAPI terrain and climate are unknown. A deliberately speculative alien horizon concealed by pearly clouds and lilac-blue mist, with abstract distant silhouettes and delicate golden atmospheric light. Avoid definitive recognizable terrain, cities or landmarks. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "50",
+      "name": "Champala",
+      "file": "50-champala-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Champala. SWAPI climate: temperate; terrain: oceans, rainforests, plateaus. A lush rainforest clinging to broad elevated plateaus above a turquoise ocean, distant cloud banks and dramatic late-afternoon sunshine. Rich teal, emerald and warm gold. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "54",
+      "name": "Zolan",
+      "file": "54-zolan-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Zolan. SWAPI terrain and climate are unknown. A deliberately speculative planetary horizon glimpsed through layered silver clouds and muted green-blue atmospheric haze, elegant cool dusk and an understated gold rim. Avoid definite cities, landmarks, creatures or identifiable geographical claims. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "51",
+      "name": "Mirial",
+      "file": "51-mirial-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Mirial. SWAPI terrain: deserts; climate unknown. An immense windswept desert of pale rose sand, sculpted dunes and distant flat-topped stone ridges beneath a deep blue sky, graceful blue shadows and warm low sunlight. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "55",
+      "name": "Ojom",
+      "file": "55-ojom-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Ojom. SWAPI climate: frigid; terrain: oceans and glaciers; surface water 100 percent. A vast dark polar ocean threaded with monumental blue glaciers and floating sea ice, luminous icy cliffs, distant mist and restrained pale amber sun. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "56",
+      "name": "Skako",
+      "file": "56-skako-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Skako. SWAPI climate: temperate; terrain: urban and vines. An imagined sprawling futuristic city softened by trailing green vines and hanging vegetation, atmospheric industrial towers partly hidden by cool teal haze, subtle warm window lights. Generic architecture, no recognizable franchise buildings. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "58",
+      "name": "Shili",
+      "file": "58-shili-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Shili. SWAPI climate: temperate; terrain: cities, savannahs, seas and plains. An expansive warm savannah and rolling plains overlooking a blue sea, with a subtle small generic futuristic coastal city in the far distance. Golden grasses, cool sea air and elegant sunset light. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    },
+    {
+      "id": "59",
+      "name": "Kalee",
+      "file": "59-kalee-impression.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: planetary archive card illustration. Create one standalone wide 16:9 cinematic digital matte painting, an explicitly speculative artist's impression of Kalee. SWAPI climate: arid, temperate and tropical; terrain: rainforests, cliffs, canyons and seas. A dramatic rugged coastline with steep jungle-covered cliffs, a deep canyon opening toward a turquoise sea and sunlit distant headlands. Lush emerald textures with warm copper rock. Premium film concept art with rich natural photographic textures, dramatic depth, elegant restrained colour and thumbnail-readable composition. Keep detailed focal features away from the bottom edge where an external caption will be placed. No text, labels, logos, borders, people, spacecraft, franchise landmarks or recognizable buildings. This is imaginative illustration informed by sparse SWAPI descriptions, not canonical reference artwork."
+    }
+  ]
+}

@@ -1127,5 +1127,1147 @@
         }
       ]
     }
+  ],
+  "planets": [
+    {
+      "id": "1",
+      "name": "Tatooine",
+      "subtitle": "desert",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "arid"
+        },
+        {
+          "label": "Terrain",
+          "value": "desert"
+        },
+        {
+          "label": "Population",
+          "value": "200000"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Alderaan",
+      "subtitle": "grasslands, mountains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "grasslands, mountains"
+        },
+        {
+          "label": "Population",
+          "value": "2000000000"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Yavin IV",
+      "subtitle": "jungle, rainforests",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate, tropical"
+        },
+        {
+          "label": "Terrain",
+          "value": "jungle, rainforests"
+        },
+        {
+          "label": "Population",
+          "value": "1000"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Hoth",
+      "subtitle": "tundra, ice caves, mountain ranges",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "frozen"
+        },
+        {
+          "label": "Terrain",
+          "value": "tundra, ice caves, mountain ranges"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Dagobah",
+      "subtitle": "swamp, jungles",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "murky"
+        },
+        {
+          "label": "Terrain",
+          "value": "swamp, jungles"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Bespin",
+      "subtitle": "gas giant",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "gas giant"
+        },
+        {
+          "label": "Population",
+          "value": "6000000"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Endor",
+      "subtitle": "forests, mountains, lakes",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "forests, mountains, lakes"
+        },
+        {
+          "label": "Population",
+          "value": "30000000"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Naboo",
+      "subtitle": "grassy hills, swamps, forests, mountains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "grassy hills, swamps, forests, mountains"
+        },
+        {
+          "label": "Population",
+          "value": "4500000000"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Coruscant",
+      "subtitle": "cityscape, mountains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "cityscape, mountains"
+        },
+        {
+          "label": "Population",
+          "value": "1000000000000"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Kamino",
+      "subtitle": "ocean",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "ocean"
+        },
+        {
+          "label": "Population",
+          "value": "1000000000"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Geonosis",
+      "subtitle": "rock, desert, mountain, barren",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate, arid"
+        },
+        {
+          "label": "Terrain",
+          "value": "rock, desert, mountain, barren"
+        },
+        {
+          "label": "Population",
+          "value": "100000000000"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Utapau",
+      "subtitle": "scrublands, savanna, canyons, sinkholes",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate, arid, windy"
+        },
+        {
+          "label": "Terrain",
+          "value": "scrublands, savanna, canyons, sinkholes"
+        },
+        {
+          "label": "Population",
+          "value": "95000000"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Mustafar",
+      "subtitle": "volcanoes, lava rivers, mountains, caves",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "hot"
+        },
+        {
+          "label": "Terrain",
+          "value": "volcanoes, lava rivers, mountains, caves"
+        },
+        {
+          "label": "Population",
+          "value": "20000"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Kashyyyk",
+      "subtitle": "jungle, forests, lakes, rivers",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "tropical"
+        },
+        {
+          "label": "Terrain",
+          "value": "jungle, forests, lakes, rivers"
+        },
+        {
+          "label": "Population",
+          "value": "45000000"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Polis Massa",
+      "subtitle": "airless asteroid",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "artificial temperate "
+        },
+        {
+          "label": "Terrain",
+          "value": "airless asteroid"
+        },
+        {
+          "label": "Population",
+          "value": "1000000"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Mygeeto",
+      "subtitle": "glaciers, mountains, ice canyons",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "frigid"
+        },
+        {
+          "label": "Terrain",
+          "value": "glaciers, mountains, ice canyons"
+        },
+        {
+          "label": "Population",
+          "value": "19000000"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Felucia",
+      "subtitle": "fungus forests",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "hot, humid"
+        },
+        {
+          "label": "Terrain",
+          "value": "fungus forests"
+        },
+        {
+          "label": "Population",
+          "value": "8500000"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Cato Neimoidia",
+      "subtitle": "mountains, fields, forests, rock arches",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate, moist"
+        },
+        {
+          "label": "Terrain",
+          "value": "mountains, fields, forests, rock arches"
+        },
+        {
+          "label": "Population",
+          "value": "10000000"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Saleucami",
+      "subtitle": "caves, desert, mountains, volcanoes",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "hot"
+        },
+        {
+          "label": "Terrain",
+          "value": "caves, desert, mountains, volcanoes"
+        },
+        {
+          "label": "Population",
+          "value": "1400000000"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Stewjon",
+      "subtitle": "grass",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "grass"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Eriadu",
+      "subtitle": "cityscape",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "polluted"
+        },
+        {
+          "label": "Terrain",
+          "value": "cityscape"
+        },
+        {
+          "label": "Population",
+          "value": "22000000000"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Corellia",
+      "subtitle": "plains, urban, hills, forests",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "plains, urban, hills, forests"
+        },
+        {
+          "label": "Population",
+          "value": "3000000000"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Rodia",
+      "subtitle": "jungles, oceans, urban, swamps",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "hot"
+        },
+        {
+          "label": "Terrain",
+          "value": "jungles, oceans, urban, swamps"
+        },
+        {
+          "label": "Population",
+          "value": "1300000000"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Nal Hutta",
+      "subtitle": "urban, oceans, swamps, bogs",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "urban, oceans, swamps, bogs"
+        },
+        {
+          "label": "Population",
+          "value": "7000000000"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Dantooine",
+      "subtitle": "oceans, savannas, mountains, grasslands",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "oceans, savannas, mountains, grasslands"
+        },
+        {
+          "label": "Population",
+          "value": "1000"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Bestine IV",
+      "subtitle": "rocky islands, oceans",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "rocky islands, oceans"
+        },
+        {
+          "label": "Population",
+          "value": "62000000"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Ord Mantell",
+      "subtitle": "plains, seas, mesas",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "plains, seas, mesas"
+        },
+        {
+          "label": "Population",
+          "value": "4000000000"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "name": "unknown",
+      "subtitle": "unknown",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "unknown"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Trandosha",
+      "subtitle": "mountains, seas, grasslands, deserts",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "arid"
+        },
+        {
+          "label": "Terrain",
+          "value": "mountains, seas, grasslands, deserts"
+        },
+        {
+          "label": "Population",
+          "value": "42000000"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Socorro",
+      "subtitle": "deserts, mountains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "arid"
+        },
+        {
+          "label": "Terrain",
+          "value": "deserts, mountains"
+        },
+        {
+          "label": "Population",
+          "value": "300000000"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Mon Cala",
+      "subtitle": "oceans, reefs, islands",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "oceans, reefs, islands"
+        },
+        {
+          "label": "Population",
+          "value": "27000000000"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Chandrila",
+      "subtitle": "plains, forests",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "plains, forests"
+        },
+        {
+          "label": "Population",
+          "value": "1200000000"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "name": "Sullust",
+      "subtitle": "mountains, volcanoes, rocky deserts",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "superheated"
+        },
+        {
+          "label": "Terrain",
+          "value": "mountains, volcanoes, rocky deserts"
+        },
+        {
+          "label": "Population",
+          "value": "18500000000"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "name": "Toydaria",
+      "subtitle": "swamps, lakes",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "swamps, lakes"
+        },
+        {
+          "label": "Population",
+          "value": "11000000"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "name": "Malastare",
+      "subtitle": "swamps, deserts, jungles, mountains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "arid, temperate, tropical"
+        },
+        {
+          "label": "Terrain",
+          "value": "swamps, deserts, jungles, mountains"
+        },
+        {
+          "label": "Population",
+          "value": "2000000000"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "name": "Dathomir",
+      "subtitle": "forests, deserts, savannas",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "forests, deserts, savannas"
+        },
+        {
+          "label": "Population",
+          "value": "5200"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "name": "Ryloth",
+      "subtitle": "mountains, valleys, deserts, tundra",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate, arid, subartic"
+        },
+        {
+          "label": "Terrain",
+          "value": "mountains, valleys, deserts, tundra"
+        },
+        {
+          "label": "Population",
+          "value": "1500000000"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "name": "Aleen Minor",
+      "subtitle": "unknown",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "unknown"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "name": "Vulpter",
+      "subtitle": "urban, barren",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate, artic"
+        },
+        {
+          "label": "Terrain",
+          "value": "urban, barren"
+        },
+        {
+          "label": "Population",
+          "value": "421000000"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "name": "Troiken",
+      "subtitle": "desert, tundra, rainforests, mountains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "desert, tundra, rainforests, mountains"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "name": "Tund",
+      "subtitle": "barren, ash",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "barren, ash"
+        },
+        {
+          "label": "Population",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "name": "Haruun Kal",
+      "subtitle": "toxic cloudsea, plateaus, volcanoes",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "toxic cloudsea, plateaus, volcanoes"
+        },
+        {
+          "label": "Population",
+          "value": "705300"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "name": "Cerea",
+      "subtitle": "verdant",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "verdant"
+        },
+        {
+          "label": "Population",
+          "value": "450000000"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "name": "Glee Anselm",
+      "subtitle": "lakes, islands, swamps, seas",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "tropical, temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "lakes, islands, swamps, seas"
+        },
+        {
+          "label": "Population",
+          "value": "500000000"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "name": "Iridonia",
+      "subtitle": "rocky canyons, acid pools",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "rocky canyons, acid pools"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "name": "Tholoth",
+      "subtitle": "unknown",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "unknown"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "name": "Iktotch",
+      "subtitle": "rocky",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "arid, rocky, windy"
+        },
+        {
+          "label": "Terrain",
+          "value": "rocky"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "name": "Quermia",
+      "subtitle": "unknown",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "unknown"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "name": "Dorin",
+      "subtitle": "unknown",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "unknown"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "name": "Champala",
+      "subtitle": "oceans, rainforests, plateaus",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "oceans, rainforests, plateaus"
+        },
+        {
+          "label": "Population",
+          "value": "3500000000"
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "name": "Mirial",
+      "subtitle": "deserts",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "deserts"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "name": "Serenno",
+      "subtitle": "rainforests, rivers, mountains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "rainforests, rivers, mountains"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "name": "Concord Dawn",
+      "subtitle": "jungles, forests, deserts",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "jungles, forests, deserts"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "name": "Zolan",
+      "subtitle": "unknown",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "unknown"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "name": "Ojom",
+      "subtitle": "oceans, glaciers",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "frigid"
+        },
+        {
+          "label": "Terrain",
+          "value": "oceans, glaciers"
+        },
+        {
+          "label": "Population",
+          "value": "500000000"
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "name": "Skako",
+      "subtitle": "urban, vines",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "urban, vines"
+        },
+        {
+          "label": "Population",
+          "value": "500000000000"
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "name": "Muunilinst",
+      "subtitle": "plains, forests, hills, mountains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "plains, forests, hills, mountains"
+        },
+        {
+          "label": "Population",
+          "value": "5000000000"
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "name": "Shili",
+      "subtitle": "cities, savannahs, seas, plains",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "temperate"
+        },
+        {
+          "label": "Terrain",
+          "value": "cities, savannahs, seas, plains"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "59",
+      "name": "Kalee",
+      "subtitle": "rainforests, cliffs, canyons, seas",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "arid, temperate, tropical"
+        },
+        {
+          "label": "Terrain",
+          "value": "rainforests, cliffs, canyons, seas"
+        },
+        {
+          "label": "Population",
+          "value": "4000000000"
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "name": "Umbara",
+      "subtitle": "unknown",
+      "facts": [
+        {
+          "label": "Climate",
+          "value": "unknown"
+        },
+        {
+          "label": "Terrain",
+          "value": "unknown"
+        },
+        {
+          "label": "Population",
+          "value": "unknown"
+        }
+      ]
+    }
   ]
 }

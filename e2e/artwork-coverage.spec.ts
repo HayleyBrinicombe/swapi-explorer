@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { mockArchive, openArchive } from './fixtures';
 import collections from './data/referenceCollections.json' with { type: 'json' };
 
-for (const kind of ['vehicles', 'starships'] as const) {
+for (const kind of ['vehicles', 'starships', 'planets'] as const) {
   test(`every ${kind} record has working local artwork, including records behind Load more`, async ({
     page,
   }) => {
@@ -19,6 +19,10 @@ for (const kind of ['vehicles', 'starships'] as const) {
         Math.min(visible + 12, records.length),
       );
     }
+    if (kind === 'planets')
+      await expect(
+        page.getByText('AI-generated artist’s impression', { exact: true }),
+      ).toHaveCount(18);
     const images = page.locator('.archive-grid img');
     await expect(images).toHaveCount(records.length);
     for (const image of await images.all()) {

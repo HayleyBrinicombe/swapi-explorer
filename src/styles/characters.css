@@ -1161,3 +1161,9 @@
   font-size: var(--font-xs);
   line-height: 1.4;
 }
+
+.artwork-credit--generated {
+  color: var(--color-archive-gold);
+  font-size: var(--font-sm);
+  font-weight: 500;
+}

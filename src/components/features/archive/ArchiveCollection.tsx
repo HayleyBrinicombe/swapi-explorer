@@ -106,8 +106,10 @@ export function ArchiveCollection({ kind }: { kind: ArchiveKind }) {
         </div>
       )}
       <p className="source-note">
-        Records from SWAPI. Imagery © Lucasfilm; artwork is not available for
-        every record.
+        Records from SWAPI. Reference imagery belongs to its respective rights
+        holders.
+        {kind === 'planets' &&
+          ' AI-generated artist’s impressions are labelled and speculative; the facts remain from SWAPI.'}
       </p>
     </section>
   );

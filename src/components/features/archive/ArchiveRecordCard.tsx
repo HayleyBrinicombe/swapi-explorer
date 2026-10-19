@@ -4,6 +4,7 @@ import type { RelatedRecord } from '../../../../shared/contracts';
 import {
   getResourceImage,
   getResourceImageCredit,
+  isGeneratedResourceImage,
   type ResourceKind,
 } from '../../../assets/resourceImages';
 import { Card } from '../../ui/Card/Card';
@@ -20,6 +21,7 @@ export function ArchiveRecordCard({
   const [failed, setFailed] = useState(false);
   const image = getResourceImage(kind, record.id);
   const credit = getResourceImageCredit(kind, record.id);
+  const generated = isGeneratedResourceImage(kind, record.id);
   const Icon = {
     planets: MdPublic,
     films: MdMovie,
@@ -45,7 +47,11 @@ export function ArchiveRecordCard({
           </div>
         )}
         {image && !failed && credit && (
-          <span className="artwork-credit">{credit}</span>
+          <span
+            className={`artwork-credit${generated ? ' artwork-credit--generated' : ''}`}
+          >
+            {credit}
+          </span>
         )}
       </div>
       <div className="connection-copy">

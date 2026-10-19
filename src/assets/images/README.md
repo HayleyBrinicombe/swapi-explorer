@@ -6,8 +6,14 @@ Images are grouped by resource: `characters/`, `planets/`, `films/`, `starships/
 
 Film posters are downloaded at 400px wide, and other resource images at 640px wide. The application imports local assets through Vite, which fingerprints filenames; images are lazy-loaded with reserved dimensions and no runtime requests to the source host. Decorative images use empty alt text beside their visible record name. Missing or failed artwork uses the matching Material category icon without hiding the data.
 
-Artwork covers **all 39 vehicles, all 36 starships and all six films** in the verified SWAPI collections, plus 42 of 60 planet records. Remaining planet records are explicitly labelled “Image unavailable”.
+Artwork covers **all 39 vehicles, all 36 starships and all six films** in the verified SWAPI collections, plus 42 reference images and 18 labelled artist’s impressions covering all 60 planet records.
 
-Coverage is deliberately partial: no substitute planet or ship is used when matching artwork is unavailable. To add an image, verify the resource's actual SWAPI ID and identity, place a named file in its category, and add its provenance to `resources.json`. SWAPI IDs are not array positions.
+Reference artwork is preferred; unrelated planets or ships are never substituted. To add an image, verify the resource's actual SWAPI ID and identity, place a named file in its category, and add its provenance to `resources.json`. SWAPI IDs are not array positions.
 
 Star Wars imagery is © Lucasfilm and its respective rights holders. Attribution documents provenance; it does not grant a licence. This fan project claims no ownership or open licence to the artwork. Production use would require appropriate rights clearance or replacement assets.
+
+## Artist’s impressions
+
+The 18 planets without matching reference artwork use speculative illustrations generated with built-in image_gen, visibly labelled **AI-generated artist’s impression** on collection and profile cards. Prompts use SWAPI terrain and climate descriptions where available; unknown facts and the unnamed planet remain unknown in the interface. These are interpretations, not canonical reference artwork.
+
+The [illustration manifest](planets/illustrations.json) is separate from reference sources; reference images take precedence. The [complete prompts](planets/illustration-prompts.json) record the inputs. Optimised 640px JPEGs live in `planets/`; generation never runs in the application and needs no API key.
