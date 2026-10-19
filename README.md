@@ -60,6 +60,7 @@ nvm use
 
 ## What you can explore
 
+- **Explore beyond the character:** homepage image previews lead straight to homeworlds, films and craft in Luke’s profile; section shortcuts make other profiles easy to explore.
 - **Browse and discover:** portrait cards, instant name search, result counts and Load more.
 - **Open a character profile:** shareable URLs, biographical details, homeworld facts, film appearances and named starships/vehicles with local imagery.
 - **Feel the atmosphere:** an eight-second opening, dramatic typography and red/blue lighting. Skip with the button or Escape; replay from the footer. Fresh page loads replay the opening.
@@ -151,7 +152,7 @@ npm run test:e2e
 
 Playwright starts the development server automatically or reuses an existing local server. The tests use deterministic API fixtures; they do not depend on live SWAPI availability. Browser failures retain screenshots and traces in `test-results/`.
 
-**Locally verified:** 19 Vitest tests and 21 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
+**Locally verified:** 19 Vitest tests and 24 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
 
 **Live deployment verified:** anonymous browser checks covered browsing, search, character details, refresh, mobile width and image loading. Live API checks confirmed successful responses, invalid input (400) and missing records (404).
 

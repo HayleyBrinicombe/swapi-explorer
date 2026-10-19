@@ -17,7 +17,13 @@ export function App() {
   const main = useRef<HTMLElement>(null);
   const finishIntro = useCallback(() => {
     setIntroVisible(false);
-    requestAnimationFrame(() => main.current?.focus({ preventScroll: true }));
+    requestAnimationFrame(() => {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target && main.current?.contains(target)) {
+        target.focus({ preventScroll: true });
+        target.scrollIntoView({ block: 'start' });
+      } else main.current?.focus({ preventScroll: true });
+    });
   }, []);
   useEffect(() => {
     const pop = () => {
@@ -43,7 +49,7 @@ export function App() {
     const url = new URL(window.location.href);
     if (next) url.searchParams.set('character', next);
     else url.searchParams.delete('character');
-    url.hash = '';
+    url.hash = next ? new URL(event.currentTarget.href).hash : '';
     window.history.pushState({}, '', url);
     setId(next);
     window.scrollTo({ top: 0 });

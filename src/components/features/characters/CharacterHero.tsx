@@ -20,7 +20,7 @@ export function CharacterHero() {
           <br />
           Discover the characters who made a galaxy unforgettable.
         </p>
-        <ButtonLink className="hero-action" href="#records">
+        <ButtonLink className="hero-action" href="#galaxy-discovery">
           Explore the galaxy <MdArrowForward size={20} aria-hidden="true" />
         </ButtonLink>
         <p className="hero-caption">A long time ago. A little closer now.</p>

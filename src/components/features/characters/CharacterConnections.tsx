@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   MdPublic,
   MdMovie,
@@ -69,6 +69,22 @@ export function CharacterConnections({ id }: { id: string }) {
     `/api/characters/${encodeURIComponent(id)}/connections`,
     characterConnectionsSchema,
   );
+  useEffect(() => {
+    if (resource.status !== 'success') return;
+    const target = window.location.hash.slice(1);
+    if (
+      ![
+        'homeworld-title',
+        'films-title',
+        'starships-title',
+        'vehicles-title',
+      ].includes(target)
+    )
+      return;
+    const heading = document.getElementById(target);
+    heading?.focus({ preventScroll: true });
+    heading?.scrollIntoView({ block: 'start' });
+  }, [resource]);
   return (
     <section
       className="character-connections"
@@ -87,7 +103,11 @@ export function CharacterConnections({ id }: { id: string }) {
             className="connection-section"
             aria-labelledby="homeworld-title"
           >
-            <h3 id="homeworld-title" className="connection-section-title">
+            <h3
+              id="homeworld-title"
+              tabIndex={-1}
+              className="connection-section-title"
+            >
               <MdPublic aria-hidden="true" /> Homeworld
             </h3>
             {resource.data.homeworld ? (
@@ -104,7 +124,11 @@ export function CharacterConnections({ id }: { id: string }) {
               key={kind}
               aria-labelledby={`${kind}-title`}
             >
-              <h3 id={`${kind}-title`} className="connection-section-title">
+              <h3
+                id={`${kind}-title`}
+                tabIndex={-1}
+                className="connection-section-title"
+              >
                 {
                   {
                     films: 'Film appearances',

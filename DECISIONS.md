@@ -93,3 +93,5 @@ I kept the core character response small and added a separate connections endpoi
 The backend resolves validated relationship URLs against fixed SWAPI collections. It never fetches a URL supplied by a browser or upstream record. Each collection shares the existing timeout, cache and in-flight request policy; collections without relevant film or craft links are skipped. Fetching whole collections is reasonable for this small dataset but would need reconsideration as the source grows.
 
 Local image catalogues associate resource IDs with verified artwork and source credits. Coverage is partial, with category icons for missing artwork. A related-data failure currently affects the whole connections section; individual group recovery would be a possible refinement.
+
+The homepage includes editorial image previews that lead directly to Luke's related records. Profile section links and clickable connection counts make the additional content discoverable before scrolling. Native URL fragments identify sections; the app restores their focus after asynchronous loading and the opening sequence, keeping links shareable without adding a routing dependency.

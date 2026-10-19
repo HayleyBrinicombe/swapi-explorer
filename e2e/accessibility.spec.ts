@@ -34,7 +34,13 @@ test('keyboard users can skip navigation, search, and open a character', async (
   ).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page.locator('main')).toBeFocused();
-  await page.keyboard.press('Tab'); // Explore the characters
+  await page.keyboard.press('Tab'); // Explore the galaxy
+  await page.keyboard.press('Tab'); // Browse characters shortcut
+  await expect(
+    page.getByRole('link', { name: 'Browse characters' }),
+  ).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#records')).toBeFocused();
   await page.keyboard.press('Tab'); // Search
   await expect(page.getByRole('searchbox')).toBeFocused();
   await page.keyboard.type('Luke');

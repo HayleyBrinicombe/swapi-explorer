@@ -1,7 +1,7 @@
 import { CharacterConnections } from './CharacterConnections';
 import { formatMeasurement } from './characterFormatting';
 import { Card } from '../../ui/Card/Card';
-import { MdChevronLeft } from 'react-icons/md';
+import { MdChevronLeft, MdArrowDownward } from 'react-icons/md';
 import { CharacterPortrait } from './CharacterPortrait';
 import { characterDetailSchema } from '../../../../shared/contracts';
 import { useResource } from '../../../hooks/useResource';
@@ -52,6 +52,15 @@ export function CharacterDetail({
           <p className="hero-description">
             A record from a galaxy far, far away.
           </p>
+          <nav className="profile-section-nav" aria-label="Character sections">
+            <span>
+              Explore this profile <MdArrowDownward aria-hidden="true" />
+            </span>
+            <a href="#homeworld-title">Homeworld</a>
+            <a href="#films-title">Films</a>
+            <a href="#starships-title">Starships</a>
+            <a href="#vehicles-title">Vehicles</a>
+          </nav>
         </div>
       </div>
       <div className="detail-layout">
@@ -73,19 +82,28 @@ export function CharacterDetail({
             <h2>Archive connections</h2>
             <dl className="connection-facts">
               {[
-                ['Film appearances', c.filmCount],
-                ['Starships', c.starshipCount],
-                ['Vehicles', c.vehicleCount],
-              ].map(([label, value]) => (
+                ['Film appearances', c.filmCount, 'films-title'],
+                ['Starships', c.starshipCount, 'starships-title'],
+                ['Vehicles', c.vehicleCount, 'vehicles-title'],
+              ].map(([label, value, target]) => (
                 <div key={label}>
-                  <dt>{label}</dt>
+                  <dt>
+                    <a href={`#${target}`}>
+                      {label}
+                      <span className="sr-only">
+                        {' '}
+                        {String(value).padStart(2, '0')}
+                      </span>{' '}
+                      <MdArrowDownward aria-hidden="true" />
+                    </a>
+                  </dt>
                   <dd>{String(value).padStart(2, '0')}</dd>
                 </div>
               ))}
             </dl>
             <p className="source-note">
-              Explore the homeworld, films and craft connected to this character
-              below.
+              Choose a connection above, or scroll down to discover their
+              galaxy.
             </p>
           </Card>
         </aside>

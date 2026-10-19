@@ -1,3 +1,4 @@
+import { GalaxyDiscovery } from './GalaxyDiscovery';
 import { CharacterHero } from './CharacterHero';
 import { Button } from '../../ui/Button/Button';
 import { CharacterGridSkeleton } from './CharacterGridSkeleton';
@@ -30,7 +31,13 @@ export function CharacterArchive({
   return (
     <>
       <CharacterHero />
-      <section id="records" className="records" aria-labelledby="records-title">
+      <GalaxyDiscovery onNavigate={onNavigate} />
+      <section
+        id="records"
+        tabIndex={-1}
+        className="records"
+        aria-labelledby="records-title"
+      >
         <div className="section-heading">
           <div>
             <p className="eyebrow">The collection</p>
