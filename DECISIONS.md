@@ -75,3 +75,11 @@ I chose Vitest for API, transformation, component and request-lifecycle checks, 
 The GitHub Actions workflow runs installation, tests, type-checking/build and Chromium checks on pushes and pull requests. Browser failures retain traces and screenshots. A fresh-checkout installation/build and live API smoke check verify the reviewer setup independently of mocked tests.
 
 The test strategy targets meaningful regressions rather than a coverage percentage. Some interaction changes were developed test-first; the project uses a mix of implementation and testing sequences. Other browser engines, assistive-technology testing, visual baselines and load testing remain areas for future work.
+
+## 10. Host the complete application behind one public URL
+
+A source-code repository and a recording let reviewers inspect the work, but a hosted application lets them try it immediately. I chose a Vercel deployment configuration that keeps the existing React and Fastify architecture: static frontend assets are served from the build output, while a small HTTP entry point forwards API requests into the same Fastify app.
+
+This avoids a separate backend hostname, CORS configuration, a framework migration or a second implementation of the character API. The local development and standalone production commands continue to work. Tests exercise real HTTP requests through the hosted entry point, including validation, missing records and cache sharing.
+
+The trade-off is a platform-specific entry point and function lifecycle: each warm instance has its own cache, and a cold start resets it. There are no background jobs or persistent connections in this application, so that limitation is appropriate. A long-running Node host would be an alternative if future requirements needed persistent processes. The public deployment must be checked without an authenticated session before its URL is given to reviewers.

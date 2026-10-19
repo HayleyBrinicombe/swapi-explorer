@@ -121,6 +121,8 @@ server/
   index.ts                  Startup and production static serving
 shared/contracts.ts         Runtime schemas and TypeScript API contracts
 e2e/                        Playwright journeys and deterministic fixtures
+api/index.ts                Hosted HTTP entry point using the existing Fastify app
+vercel.json                 Frontend build and same-origin API routing
 .github/workflows/ci.yml     Automated checks on pushes and pull requests
 ```
 
@@ -145,7 +147,7 @@ npm run test:e2e
 
 Playwright starts the development server automatically or reuses an existing local server. The tests use deterministic API fixtures; they do not depend on live SWAPI availability. Browser failures retain screenshots and traces in `test-results/`.
 
-**Locally verified:** 14 Vitest tests and 18 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
+**Locally verified:** 16 Vitest tests and 18 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
 
 Coverage includes mapping, malformed/missing IDs, upstream failures and timeouts, cache expiry/concurrent calls, request races/cancellation, loading/error/retry, search, load more, direct links/history, portrait fallbacks, hover/focus previews, opening duration/refresh/replay, keyboard navigation and four viewport widths. Automated WCAG A/AA scans cover browse and detail; they supplement manual review rather than establish full accessibility conformance.
 
@@ -161,6 +163,19 @@ npm start
 ```
 
 Open **[http://127.0.0.1:3001](http://127.0.0.1:3001)**. Fastify serves the built frontend and API from one origin. `PORT` can change the production port; the current start script uses macOS/Linux environment-variable syntax.
+
+## Public hosting
+
+The repository includes a Vercel deployment configuration for the complete application:
+
+- Vite builds the frontend into `dist/client`, served as static assets.
+- Requests under `/api` go to `api/index.ts`, which forwards them to the existing Fastify app. Routes, validation, transformations and upstream error handling stay in `server/`.
+- Frontend and API share an origin, so no separate API URL or CORS setup is needed.
+- Node.js 24 is selected from `package.json`. No API keys or runtime secrets are required.
+
+To deploy in your own Vercel account, import this GitHub repository at [vercel.com/new](https://vercel.com/new). The tracked `vercel.json` supplies the build command, output directory and API routing. Keep the production URL publicly accessible so reviewers can open it without signing in. Only share the live URL after checking the page and `/api/characters` anonymously.
+
+Vercel runs the backend as a Node.js function. Its in-memory cache belongs to each warm instance and can disappear on a cold start; it is an optimisation, not durable storage. Source data still comes from SWAPI at request time. The backend does not run on GitHub Pages.
 
 ## Screenshots
 
@@ -185,7 +200,7 @@ I prioritised a complete character-exploration journey, a consistent component s
 
 Known limits: resolved homeworld/film names are deferred; search is not reload-persistent; returning to the collection retains search but resets the revealed-card count. The cache is process-local, with no stale-on-error policy, offline mode or automatic retries. Chromium is covered; other engines, load tests and a broader assistive-technology audit remain future work.
 
-Production requirements could justify server-side search/pagination, persistence for saved records, shared caching, a router/query library, responsive image formats and operational monitoring. Public hosting would also need suitable network binding, rate limits and security headers. Deployment has not been set up.
+Production requirements could justify server-side search/pagination, persistence for saved records, shared caching, a router/query library, responsive image formats and operational monitoring. Public hosting would also need suitable network binding, rate limits and security headers. The hosting configuration is included; deployment requires a Vercel account.
 
 ## Credits and AI-assisted development
 
