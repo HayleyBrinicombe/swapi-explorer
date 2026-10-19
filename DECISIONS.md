@@ -95,3 +95,9 @@ The backend resolves validated relationship URLs against fixed SWAPI collections
 Local image catalogues associate resource IDs with verified artwork and source credits. Coverage is partial, with category icons for missing artwork. A related-data failure currently affects the whole connections section; individual group recovery would be a possible refinement.
 
 The homepage includes editorial image previews that lead directly to Luke's related records. Profile section links and clickable connection counts make the additional content discoverable before scrolling. Native URL fragments identify sections; the app restores their focus after asynchronous loading and the opening sequence, keeping links shareable without adding a routing dependency.
+
+## 12. Make related content discoverable through navigation
+
+I added a prominent, clickable scroll cue before the profile header and category links in the main navigation. Each category opens a searchable collection with a shareable query-parameter URL. The header wraps on smaller screens so destinations remain visible without a menu dependency.
+
+Collection routes use the existing fixed-source clients and per-collection cache. A shared transformation module and record card serve both collection pages and character connections, keeping names, facts, imagery and failure fallbacks consistent. The card uses the heading level appropriate to its context. Collection pages provide loading, error/retry, empty and Load more states; dedicated resource detail pages and species browsing remain outside this scope.

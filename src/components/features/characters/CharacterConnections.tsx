@@ -1,69 +1,9 @@
-import { useEffect, useState } from 'react';
-import {
-  MdPublic,
-  MdMovie,
-  MdRocketLaunch,
-  MdDirectionsCar,
-} from 'react-icons/md';
-import {
-  characterConnectionsSchema,
-  type RelatedRecord,
-} from '../../../../shared/contracts';
-import {
-  getResourceImage,
-  type ResourceKind,
-} from '../../../assets/resourceImages';
+import { useEffect } from 'react';
+import { MdPublic } from 'react-icons/md';
+import { characterConnectionsSchema } from '../../../../shared/contracts';
 import { useResource } from '../../../hooks/useResource';
-import { Card } from '../../ui/Card/Card';
 import { ResourceState } from '../../ui/ResourceState/ResourceState';
-
-function ConnectionCard({
-  record,
-  kind,
-}: {
-  record: RelatedRecord;
-  kind: ResourceKind;
-}) {
-  const [failed, setFailed] = useState(false);
-  const image = getResourceImage(kind, record.id);
-  const Icon = {
-    planets: MdPublic,
-    films: MdMovie,
-    starships: MdRocketLaunch,
-    vehicles: MdDirectionsCar,
-  }[kind];
-  return (
-    <Card className={`connection-card connection-card--${kind}`}>
-      <div className="connection-image">
-        {image && !failed ? (
-          <img
-            src={image}
-            alt=""
-            loading="lazy"
-            width="640"
-            height={kind === 'films' ? '600' : '360'}
-            onError={() => setFailed(true)}
-          />
-        ) : (
-          <Icon size={48} aria-hidden="true" />
-        )}
-      </div>
-      <div className="connection-copy">
-        <p className="eyebrow">{record.subtitle}</p>
-        <h4>{record.name}</h4>
-        <dl>
-          {record.facts.map((fact) => (
-            <div key={fact.label}>
-              <dt>{fact.label}</dt>
-              <dd>{fact.value}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </Card>
-  );
-}
-
+import { ArchiveRecordCard } from '../archive/ArchiveRecordCard';
 export function CharacterConnections({ id }: { id: string }) {
   const { resource, retry } = useResource(
     `/api/characters/${encodeURIComponent(id)}/connections`,
@@ -74,6 +14,7 @@ export function CharacterConnections({ id }: { id: string }) {
     const target = window.location.hash.slice(1);
     if (
       ![
+        'connections-title',
         'homeworld-title',
         'films-title',
         'starships-title',
@@ -91,7 +32,9 @@ export function CharacterConnections({ id }: { id: string }) {
       aria-labelledby="connections-title"
     >
       <p className="eyebrow">Every legend has a story</p>
-      <h2 id="connections-title">Explore their galaxy</h2>
+      <h2 id="connections-title" tabIndex={-1}>
+        Explore their galaxy
+      </h2>
       {resource.status !== 'success' ? (
         <ResourceState
           message={resource.status === 'error' ? resource.message : undefined}
@@ -111,7 +54,10 @@ export function CharacterConnections({ id }: { id: string }) {
               <MdPublic aria-hidden="true" /> Homeworld
             </h3>
             {resource.data.homeworld ? (
-              <ConnectionCard record={resource.data.homeworld} kind="planets" />
+              <ArchiveRecordCard
+                record={resource.data.homeworld}
+                kind="planets"
+              />
             ) : (
               <p className="source-note">
                 Homeworld unknown in the source records.
@@ -142,7 +88,7 @@ export function CharacterConnections({ id }: { id: string }) {
                 <ul className="connection-grid">
                   {resource.data[kind].map((record) => (
                     <li key={record.id}>
-                      <ConnectionCard record={record} kind={kind} />
+                      <ArchiveRecordCard record={record} kind={kind} />
                     </li>
                   ))}
                 </ul>

@@ -40,3 +40,14 @@ export const characterConnectionsSchema = z.object({
 });
 export type RelatedRecord = z.infer<typeof relatedRecordSchema>;
 export type CharacterConnections = z.infer<typeof characterConnectionsSchema>;
+
+export const archiveKinds = [
+  'planets',
+  'films',
+  'starships',
+  'vehicles',
+] as const;
+export type ArchiveKind = (typeof archiveKinds)[number];
+export const archiveCollectionSchema = z.object({
+  records: z.array(relatedRecordSchema),
+});

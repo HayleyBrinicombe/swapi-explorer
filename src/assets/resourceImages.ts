@@ -1,5 +1,6 @@
 import catalogue from './images/resources.json';
-export type ResourceKind = 'planets' | 'films' | 'starships' | 'vehicles';
+import type { ArchiveKind } from '../../shared/contracts';
+export type ResourceKind = ArchiveKind;
 const files = import.meta.glob<string>(
   './images/{planets,films,starships,vehicles}/*.jpg',
   {

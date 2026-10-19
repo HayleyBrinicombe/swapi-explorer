@@ -477,3 +477,44 @@ footer p a {
     scroll-behavior: auto !important;
   }
 }
+
+/* All archive destinations remain visible and keyboard-accessible on small screens. */
+.site-header {
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+.site-header nav {
+  margin-left: auto;
+}
+.site-header nav a {
+  min-height: 44px;
+  white-space: nowrap;
+  padding-inline: var(--space-4);
+}
+.header-caption {
+  display: none;
+}
+@media (max-width: 1150px) {
+  .site-header nav {
+    flex-basis: 100%;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+  }
+  .site-header nav a {
+    font-size: var(--font-sm);
+  }
+}
+@media (max-width: 600px) {
+  .site-header {
+    gap: var(--space-3);
+    padding-block: var(--space-4);
+  }
+  .site-header nav {
+    justify-content: flex-start;
+  }
+  .site-header nav a {
+    padding-inline: var(--space-3);
+  }
+}

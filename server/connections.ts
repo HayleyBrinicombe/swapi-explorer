@@ -2,6 +2,7 @@ import type {
   CharacterConnections,
   RelatedRecord,
 } from '../shared/contracts.js';
+import { toPlanet, toFilm, toCraft } from './resources.js';
 import { ApplicationError, type SwapiClient } from './swapi.js';
 const idOf = (url: string) => url.replace(/\/$/, '').split('/').at(-1)!;
 const sameResource = (a: string, b: string) =>
@@ -46,37 +47,12 @@ export function createConnectionService(client: SwapiClient) {
         'UPSTREAM_UNAVAILABLE',
         'The homeworld record is unavailable. Please try again.',
       );
-    const craft = (record: (typeof starships)[number]): RelatedRecord => ({
-      id: idOf(record.url),
-      name: record.name,
-      subtitle: record.model,
-      facts: [
-        { label: 'Manufacturer', value: record.manufacturer },
-        { label: 'Crew', value: record.crew },
-      ],
-    });
     return {
       homeworld:
-        planet.name.toLowerCase() === 'unknown'
-          ? null
-          : {
-              id: idOf(planet.url),
-              name: planet.name,
-              subtitle: planet.terrain,
-              facts: [
-                { label: 'Climate', value: planet.climate },
-                { label: 'Terrain', value: planet.terrain },
-                { label: 'Population', value: planet.population },
-              ],
-            },
-      films: select(person.films, films, (f) => ({
-        id: idOf(f.url),
-        name: f.title,
-        subtitle: `Episode ${['I', 'II', 'III', 'IV', 'V', 'VI'][f.episode_id - 1]} · ${f.release_date.slice(0, 4)}`,
-        facts: [{ label: 'Director', value: f.director }],
-      })),
-      starships: select(person.starships, starships, craft),
-      vehicles: select(person.vehicles, vehicles, craft),
+        planet.name.toLowerCase() === 'unknown' ? null : toPlanet(planet),
+      films: select(person.films, films, toFilm),
+      starships: select(person.starships, starships, toCraft),
+      vehicles: select(person.vehicles, vehicles, toCraft),
     };
   };
 }

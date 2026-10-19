@@ -44,6 +44,13 @@ export function CharacterDetail({
       <a href="?" className="text-link" onClick={onBack}>
         <MdChevronLeft size={17} aria-hidden="true" /> Back to directory
       </a>
+      <a className="profile-scroll-cue" href="#connections-title">
+        <span>
+          <strong>Explore below</strong>
+          <span>Homeworld, film appearances, starships &amp; vehicles</span>
+        </span>
+        <MdArrowDownward size={28} aria-hidden="true" />
+      </a>
       <div className="detail-header">
         <CharacterPortrait id={c.id} name={c.name} eager />
         <div className="detail-title">

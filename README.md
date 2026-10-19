@@ -61,6 +61,7 @@ nvm use
 ## What you can explore
 
 - **Explore beyond the character:** homepage image previews lead straight to homeworlds, films and craft in Luke’s profile; section shortcuts make other profiles easy to explore.
+- **Browse the wider archive:** top navigation opens searchable planet, film, starship and vehicle collections, with local imagery and Load more.
 - **Browse and discover:** portrait cards, instant name search, result counts and Load more.
 - **Open a character profile:** shareable URLs, biographical details, homeworld facts, film appearances and named starships/vehicles with local imagery.
 - **Feel the atmosphere:** an eight-second opening, dramatic typography and red/blue lighting. Skip with the button or Escape; replay from the footer. Fresh page loads replay the opening.
@@ -101,6 +102,7 @@ flowchart LR
 | `GET /api/characters`     | `{ characters: Character[] }` |
 | `GET /api/characters/:id` | `{ character: Character }`    |
 | `GET /api/characters/:id/connections` | `{ homeworld, films, starships, vehicles }` |
+| `GET /api/archive/planets` (also `films`, `starships`, `vehicles`) | `{ records: RelatedRecord[] }` |
 
 IDs come from validated source URLs, not array positions. API IDs must be positive integers of at most six digits. Errors use `{ error: { code, message } }`: **400** invalid input, **404** missing record, **502** upstream HTTP/network/schema failure, **504** upstream timeout and **500** unexpected failure. Diagnostics stay in server logs.
 
@@ -115,6 +117,7 @@ src/
     ui/                     Button, Card, Container, Stack, Typography,
                             Badge, Skeleton, ResourceState and CinematicIntro
     features/characters/    Character browse, hero, card, portrait and detail
+    features/archive/       Category collection views and shared resource cards
   hooks/                    React request state, cancellation and retry
   services/                 HTTP fetching, validation and safe error messages
   styles/                   Design tokens, base styles and feature motion
@@ -122,6 +125,7 @@ server/
   app.ts                    Routes, request validation and error responses
   characters.ts             Character service and data transformation
   connections.ts            Resolve homeworld, films and craft relationships
+  resources.ts              Shared resource transformations and collection service
   swapi.ts                  Source clients, validation, timeout and per-collection cache
   index.ts                  Startup and production static serving
 shared/contracts.ts         Runtime schemas and TypeScript API contracts
@@ -152,7 +156,7 @@ npm run test:e2e
 
 Playwright starts the development server automatically or reuses an existing local server. The tests use deterministic API fixtures; they do not depend on live SWAPI availability. Browser failures retain screenshots and traces in `test-results/`.
 
-**Locally verified:** 19 Vitest tests and 24 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
+**Locally verified:** 23 Vitest tests and 26 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
 
 **Live deployment verified:** anonymous browser checks covered browsing, search, character details, refresh, mobile width and image loading. Live API checks confirmed successful responses, invalid input (400) and missing records (404).
 
@@ -189,6 +193,13 @@ The initial production deployment was published with the Vercel CLI. GitHub Acti
 ## Screenshots
 
 <details>
+<summary>Planets and category navigation</summary>
+
+![Planets collection with searchable records and category navigation](docs/planets.png)
+
+</details>
+
+<details>
 <summary>Desktop collection</summary>
 
 ![Desktop character collection](docs/desktop.png)
@@ -205,9 +216,9 @@ The initial production deployment was published with the Vercel CLI. GitHub Acti
 
 ## Scope and trade-offs
 
-I prioritised a complete character-exploration journey, a consistent component system and clear backend boundaries. Additional resource browsers, authentication and persistence were deferred to keep the scope focused.
+I prioritised a complete character-exploration journey, a consistent component system and clear backend boundaries. The archive also provides lightweight category browsing; authentication and persistence remain outside its read-only scope.
 
-Known limits: separate resource browsers and species details are deferred; related-image coverage is partial; search is not reload-persistent; returning to the collection retains search but resets the revealed-card count. The cache is process-local, with no stale-on-error policy, offline mode or automatic retries. Chromium is covered; other engines, load tests and a broader assistive-technology audit remain future work.
+Known limits: species browsing and separate resource detail pages are deferred; related-image coverage is partial; search is not reload-persistent; returning to the collection retains search but resets the revealed-card count. The cache is process-local, with no stale-on-error policy, offline mode or automatic retries. Chromium is covered; other engines, load tests and a broader assistive-technology audit remain future work.
 
 Production requirements could justify server-side search/pagination, persistence for saved records, shared caching, a router/query library, responsive image formats and operational monitoring. The hosted configuration sets content-type and referrer security headers; rate limiting and a broader security policy remain future work.
 

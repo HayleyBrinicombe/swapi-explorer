@@ -6,13 +6,20 @@ import { Button } from './components/ui/Button/Button';
 import { Container } from './components/ui/Container/Container';
 import { MdRocketLaunch, MdOpenInNew } from 'react-icons/md';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { archiveKinds, type ArchiveKind } from '../shared/contracts';
+import { ArchiveCollection } from './components/features/archive/ArchiveCollection';
 import { CharacterArchive } from './components/features/characters/CharacterArchive';
 import { CharacterDetail } from './components/features/characters/CharacterDetail';
 const selectedId = () =>
   new URLSearchParams(window.location.search).get('character');
+const selectedCollection = (): ArchiveKind | null => {
+  const value = new URLSearchParams(window.location.search).get('collection');
+  return archiveKinds.find((kind) => kind === value) ?? null;
+};
 export function App() {
   const [introVisible, setIntroVisible] = useState(shouldShowIntro);
   const [id, setId] = useState(selectedId);
+  const [collection, setCollection] = useState(selectedCollection);
   const [search, setSearch] = useState('');
   const main = useRef<HTMLElement>(null);
   const finishIntro = useCallback(() => {
@@ -28,6 +35,7 @@ export function App() {
   useEffect(() => {
     const pop = () => {
       setId(selectedId());
+      setCollection(selectedCollection());
       main.current?.focus();
     };
     window.addEventListener('popstate', pop);
@@ -36,6 +44,7 @@ export function App() {
   function navigate(
     event: React.MouseEvent<HTMLAnchorElement>,
     next: string | null,
+    nextCollection: ArchiveKind | null = null,
   ) {
     if (
       event.button !== 0 ||
@@ -49,9 +58,12 @@ export function App() {
     const url = new URL(window.location.href);
     if (next) url.searchParams.set('character', next);
     else url.searchParams.delete('character');
-    url.hash = next ? new URL(event.currentTarget.href).hash : '';
+    if (nextCollection) url.searchParams.set('collection', nextCollection);
+    else url.searchParams.delete('collection');
+    url.hash = new URL(event.currentTarget.href).hash;
     window.history.pushState({}, '', url);
     setId(next);
+    setCollection(nextCollection);
     window.scrollTo({ top: 0 });
     main.current?.focus();
   }
@@ -78,13 +90,31 @@ export function App() {
           </a>
           <nav aria-label="Main navigation">
             <a
-              className="nav-active"
+              className={!collection ? 'nav-active' : undefined}
               href="?"
               onClick={(event) => navigate(event, null)}
-              aria-current={id ? undefined : 'page'}
+              aria-current={!id && !collection ? 'page' : undefined}
             >
               Characters
             </a>
+            {archiveKinds.map((kind) => (
+              <a
+                key={kind}
+                href={`?collection=${kind}`}
+                onClick={(event) => navigate(event, null, kind)}
+                className={collection === kind ? 'nav-active' : undefined}
+                aria-current={collection === kind ? 'page' : undefined}
+              >
+                {
+                  {
+                    planets: 'Planets',
+                    films: 'Films',
+                    starships: 'Starships',
+                    vehicles: 'Vehicles',
+                  }[kind]
+                }
+              </a>
+            ))}
             <a href="https://swapi.info/" target="_blank" rel="noreferrer">
               About SWAPI <MdOpenInNew size={13} aria-hidden="true" />
               <span className="sr-only"> (opens in a new tab)</span>
@@ -101,6 +131,8 @@ export function App() {
               id={id}
               onBack={(event) => navigate(event, null)}
             />
+          ) : collection ? (
+            <ArchiveCollection key={collection} kind={collection} />
           ) : (
             <CharacterArchive
               search={search}

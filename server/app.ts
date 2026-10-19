@@ -1,4 +1,6 @@
 import Fastify from 'fastify';
+import { archiveKinds } from '../shared/contracts.js';
+import { createArchiveService } from './resources.js';
 import { createConnectionService } from './connections.js';
 import type { ApiError } from '../shared/contracts.js';
 import {
@@ -14,6 +16,12 @@ export function buildApp({
   const app = Fastify({ logger, bodyLimit: 16_384 });
   const service = createCharacterService(client);
   const connections = createConnectionService(client);
+  const archive = createArchiveService(client);
+  for (const kind of archiveKinds) {
+    app.get(`/api/archive/${kind}`, async () => ({
+      records: await archive(kind),
+    }));
+  }
   app.setErrorHandler((error, request, reply) => {
     if (
       typeof error === 'object' &&

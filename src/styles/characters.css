@@ -865,7 +865,7 @@
 .connection-copy {
   padding: var(--space-5);
 }
-.connection-copy h4 {
+.connection-copy .archive-record-title {
   margin: var(--space-2) 0 var(--space-4);
   font-size: var(--font-xl);
 }
@@ -899,7 +899,7 @@
   aspect-ratio: auto;
   min-height: 220px;
 }
-.connection-card--planets h4 {
+.connection-card--planets .archive-record-title {
   font-size: var(--font-title);
 }
 @media (max-width: 600px) {
@@ -1063,4 +1063,75 @@
     flex-direction: column;
     gap: var(--space-4);
   }
+}
+
+.profile-scroll-cue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin: 0 0 var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    100deg,
+    var(--color-gold-surface),
+    var(--color-surface)
+  );
+  color: var(--color-text);
+  text-decoration: none;
+}
+.profile-scroll-cue strong {
+  display: block;
+  font-size: var(--font-lg);
+  color: var(--color-archive-gold);
+  margin-bottom: var(--space-1);
+}
+.profile-scroll-cue > span > span {
+  display: block;
+  color: var(--color-muted);
+  font-size: var(--font-sm);
+  line-height: 1.5;
+}
+.profile-scroll-cue > svg {
+  color: var(--color-archive-gold);
+  flex-shrink: 0;
+}
+.profile-scroll-cue:is(:hover, :focus-visible) {
+  border-color: var(--color-archive-gold);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .profile-scroll-cue > svg {
+    animation: scroll-cue 1.2s ease-in-out 3;
+  }
+}
+@keyframes scroll-cue {
+  50% {
+    transform: translateY(5px);
+  }
+}
+#connections-title {
+  scroll-margin-top: var(--space-8);
+}
+.archive-collection {
+  padding: var(--space-10) var(--page-gutter) var(--space-16);
+  min-height: 70vh;
+}
+.archive-collection h1 {
+  font-size: clamp(36px, 5vw, 65px);
+  margin: var(--space-3) 0 var(--space-4);
+}
+.archive-collection .search-toolbar {
+  margin-block: var(--space-8);
+}
+.archive-grid .connection-card--planets {
+  display: block;
+}
+.archive-grid .connection-card--planets .connection-image {
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+}
+.archive-grid .archive-record-title {
+  overflow-wrap: anywhere;
 }
