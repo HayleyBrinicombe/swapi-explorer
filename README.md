@@ -11,7 +11,7 @@ A cinematic Star Wars character explorer, built with React, TypeScript and Fasti
 ![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
 
-[Watch the demo](https://raw.githubusercontent.com/HayleyBrinicombe/swapi-explorer/main/docs/demo.webm) · [Quick start](#quick-start) · [Architecture](#architecture) · [Engineering decisions](DECISIONS.md)
+[Open the live app](https://swapi-explorer-chi.vercel.app) · [Watch the demo](https://raw.githubusercontent.com/HayleyBrinicombe/swapi-explorer/main/docs/demo.webm) · [Quick start](#quick-start) · [Architecture](#architecture) · [Engineering decisions](DECISIONS.md)
 
 </div>
 
@@ -19,9 +19,11 @@ A cinematic Star Wars character explorer, built with React, TypeScript and Fasti
 
 ## Try it
 
+**[Launch Galactic Archive](https://swapi-explorer-chi.vercel.app)** — open the interactive application directly. No installation, account or API key is required.
+
 **See it in action:** [watch the recorded walkthrough](https://raw.githubusercontent.com/HayleyBrinicombe/swapi-explorer/main/docs/demo.webm), including the cinematic opening and interactive cards. [Browse the screenshots](#screenshots) for desktop, mobile and character detail views.
 
-**Use the interactive app:** follow the quick start below. The application currently runs locally; the demo link is a recording, not a hosted application.
+**Run it locally:** follow the quick start below to explore the code and run the application on your machine.
 
 ## Quick start
 
@@ -149,6 +151,8 @@ Playwright starts the development server automatically or reuses an existing loc
 
 **Locally verified:** 16 Vitest tests and 18 Playwright tests passed, along with type-checking and the production build. A fresh checkout was also installed with `npm ci`, built, and used to serve the frontend and a live character response successfully.
 
+**Live deployment verified:** anonymous browser checks covered browsing, search, character details, refresh, mobile width and image loading. Live API checks confirmed successful responses, invalid input (400) and missing records (404).
+
 Coverage includes mapping, malformed/missing IDs, upstream failures and timeouts, cache expiry/concurrent calls, request races/cancellation, loading/error/retry, search, load more, direct links/history, portrait fallbacks, hover/focus previews, opening duration/refresh/replay, keyboard navigation and four viewport widths. Automated WCAG A/AA scans cover browse and detail; they supplement manual review rather than establish full accessibility conformance.
 
 GitHub Actions runs installation, tests, build and Chromium checks on pushes and pull requests, and uploads browser artifacts on failure. Its status badge above reports the hosted result. The workflow needs no secrets. Local checks are distinct from a hosted CI run.
@@ -166,7 +170,7 @@ Open **[http://127.0.0.1:3001](http://127.0.0.1:3001)**. Fastify serves the buil
 
 ## Public hosting
 
-The repository includes a Vercel deployment configuration for the complete application:
+The complete application is hosted at **[swapi-explorer-chi.vercel.app](https://swapi-explorer-chi.vercel.app)** using the tracked Vercel configuration:
 
 - Vite builds the frontend into `dist/client`, served as static assets.
 - Requests under `/api` go to `api/index.ts`, which forwards them to the existing Fastify app. Routes, validation, transformations and upstream error handling stay in `server/`.
@@ -176,6 +180,8 @@ The repository includes a Vercel deployment configuration for the complete appli
 To deploy in your own Vercel account, import this GitHub repository at [vercel.com/new](https://vercel.com/new). The tracked `vercel.json` supplies the build command, output directory and API routing. Keep the production URL publicly accessible so reviewers can open it without signing in. Only share the live URL after checking the page and `/api/characters` anonymously.
 
 Vercel runs the backend as a Node.js function. Its in-memory cache belongs to each warm instance and can disappear on a cold start; it is an optimisation, not durable storage. Source data still comes from SWAPI at request time. The backend does not run on GitHub Pages.
+
+The initial production deployment was published with the Vercel CLI. GitHub Actions runs the checks independently; automatic Vercel deployment on Git pushes requires connecting the repository in the Vercel account.
 
 ## Screenshots
 
@@ -200,7 +206,7 @@ I prioritised a complete character-exploration journey, a consistent component s
 
 Known limits: resolved homeworld/film names are deferred; search is not reload-persistent; returning to the collection retains search but resets the revealed-card count. The cache is process-local, with no stale-on-error policy, offline mode or automatic retries. Chromium is covered; other engines, load tests and a broader assistive-technology audit remain future work.
 
-Production requirements could justify server-side search/pagination, persistence for saved records, shared caching, a router/query library, responsive image formats and operational monitoring. Public hosting would also need suitable network binding, rate limits and security headers. The hosting configuration is included; deployment requires a Vercel account.
+Production requirements could justify server-side search/pagination, persistence for saved records, shared caching, a router/query library, responsive image formats and operational monitoring. The hosted configuration sets content-type and referrer security headers; rate limiting and a broader security policy remain future work.
 
 ## Credits and AI-assisted development
 

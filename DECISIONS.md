@@ -2,6 +2,19 @@
 
 My priority was a complete, polished character-exploration journey with clear application boundaries and a straightforward developer setup. I chose a small full-stack architecture that makes validation, data flow and failure handling easy to explain and test.
 
+## My priorities and the decisions they informed
+
+| My priority | Decision and reasoning | Cost I accepted |
+| --- | --- | --- |
+| Make the assessment easy to try and review | One repository, one local startup command, and a same-origin hosting configuration for the frontend and API | A small platform-specific deployment adapter |
+| Demonstrate backend engineering clearly | Separate HTTP handling, character transformation and upstream access, with shared validated contracts | More boundaries than a frontend-only explorer needs |
+| Build on my component-library experience | Typed, composable UI primitives, central design tokens and separate character features | Some indirection when navigating components |
+| Give the product a memorable identity | Character imagery, a cinematic opening and purposeful interaction states | More asset weight and motion to manage accessibly |
+| Keep the scope explainable and maintainable | Local state and search, a small cache, and no database | A design intended for this small read-only dataset |
+| Make changes safe to review and deliver | Boundary-focused tests, browser journeys and GitHub Actions | Test maintenance and Chromium-only browser coverage |
+
+These choices reflect the product direction and engineering priorities I set for the assessment. AI supported implementation and investigation, as acknowledged in the README. The sections below explain the alternatives and limitations I would discuss in a technical review; they do not imply that every choice is appropriate for a larger production system.
+
 ## 1. React and Fastify with one root package
 
 I selected React, TypeScript and Vite for the frontend, and Node.js, TypeScript and Fastify for the API. This supports a responsive interface while making the frontend/backend responsibilities explicit. One npm package provides a simple `npm install` and `npm run dev` workflow; separate workspaces would add configuration without a useful boundary at this scale.
@@ -82,4 +95,6 @@ A source-code repository and a recording let reviewers inspect the work, but a h
 
 This avoids a separate backend hostname, CORS configuration, a framework migration or a second implementation of the character API. The local development and standalone production commands continue to work. Tests exercise real HTTP requests through the hosted entry point, including validation, missing records and cache sharing.
 
-The trade-off is a platform-specific entry point and function lifecycle: each warm instance has its own cache, and a cold start resets it. There are no background jobs or persistent connections in this application, so that limitation is appropriate. A long-running Node host would be an alternative if future requirements needed persistent processes. The public deployment must be checked without an authenticated session before its URL is given to reviewers.
+The trade-off is a platform-specific entry point and function lifecycle: each warm instance has its own cache, and a cold start resets it. There are no background jobs or persistent connections in this application, so that limitation is appropriate. A long-running Node host would be an alternative if future requirements needed persistent processes.
+
+The production URL is linked from the README and repository homepage. Anonymous browser checks verified browsing, search, detail navigation, refresh, mobile width and image loading against the deployed application. Live API checks verified successful, invalid-ID and missing-record responses. The initial deployment uses the Vercel CLI; connecting GitHub for automatic deployments remains a separate setup step. Passing GitHub Actions checks alone does not publish a new deployment.
