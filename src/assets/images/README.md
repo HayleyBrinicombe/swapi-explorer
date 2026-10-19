@@ -6,6 +6,8 @@ Images are grouped by resource: `characters/`, `planets/`, `films/`, `starships/
 
 Film posters are downloaded at 400px wide, and other resource images at 640px wide. The application imports local assets through Vite, which fingerprints filenames; images are lazy-loaded with reserved dimensions and no runtime requests to the source host. Decorative images use empty alt text beside their visible record name. Missing or failed artwork uses the matching Material category icon without hiding the data.
 
+Vehicle artwork currently covers **32 of the 39 SWAPI records**, including the complete initial set of twelve cards. The remaining seven records are explicitly labelled “Image unavailable”.
+
 Coverage is deliberately partial: no substitute planet or ship is used when matching artwork is unavailable. To add an image, verify the resource's actual SWAPI ID and identity, place a named file in its category, and add its provenance to `resources.json`. SWAPI IDs are not array positions.
 
 Star Wars imagery is © Lucasfilm and its respective rights holders. Attribution documents provenance; it does not grant a licence. This fan project claims no ownership or open licence to the artwork. Production use would require appropriate rights clearance or replacement assets.

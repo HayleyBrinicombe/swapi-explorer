@@ -1135,3 +1135,16 @@
 .archive-grid .archive-record-title {
   overflow-wrap: anywhere;
 }
+
+.archive-image-fallback {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  color: var(--color-muted);
+  font-size: var(--font-sm);
+}
+.archive-image-fallback svg {
+  color: var(--color-accent);
+  opacity: 0.7;
+}

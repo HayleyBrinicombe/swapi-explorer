@@ -3,7 +3,7 @@ import {
   MdPublic,
   MdMovie,
   MdRocketLaunch,
-  MdDirectionsCar,
+  MdRadar,
 } from 'react-icons/md';
 import {
   getResourceImage,
@@ -47,7 +47,7 @@ const previews = [
     name: 'Snowspeeder',
     description: "Explore Luke's journeys on the ground.",
     target: 'vehicles-title',
-    Icon: MdDirectionsCar,
+    Icon: MdRadar,
   },
 ] satisfies {
   kind: ResourceKind;

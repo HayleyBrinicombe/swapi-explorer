@@ -1,10 +1,5 @@
 import { useState } from 'react';
-import {
-  MdPublic,
-  MdMovie,
-  MdRocketLaunch,
-  MdDirectionsCar,
-} from 'react-icons/md';
+import { MdPublic, MdMovie, MdRocketLaunch, MdRadar } from 'react-icons/md';
 import type { RelatedRecord } from '../../../../shared/contracts';
 import {
   getResourceImage,
@@ -27,7 +22,7 @@ export function ArchiveRecordCard({
     planets: MdPublic,
     films: MdMovie,
     starships: MdRocketLaunch,
-    vehicles: MdDirectionsCar,
+    vehicles: MdRadar,
   }[kind];
   return (
     <Card className={`connection-card connection-card--${kind}`}>
@@ -42,7 +37,10 @@ export function ArchiveRecordCard({
             onError={() => setFailed(true)}
           />
         ) : (
-          <Icon size={48} aria-hidden="true" />
+          <div className="archive-image-fallback">
+            <Icon size={40} aria-hidden="true" />
+            <span>Image unavailable</span>
+          </div>
         )}
       </div>
       <div className="connection-copy">

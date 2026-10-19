@@ -489,11 +489,99 @@
   },
   {
     "kind": "vehicles",
+    "id": "4",
+    "file": "4-sandcrawler.jpg",
+    "title": "Sandcrawler",
+    "page": "https://www.starwars.com/databank/sandcrawler",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/sandcrawler-main_eb1b036b.jpeg?region=251%2C20%2C865%2C487&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "6",
+    "file": "6-t-16-skyhopper.jpg",
+    "title": "T-16 Skyhopper",
+    "page": "https://www.starwars.com/databank/t-16-skyhopper",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_t16skyhopper_01_169_ad69e901.jpeg?region=141%2C304%2C750%2C422&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "7",
+    "file": "7-landspeeder.jpg",
+    "title": "Landspeeder",
+    "page": "https://www.starwars.com/databank/landspeeder",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_landspeeder_01_169_50afe4dc.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "8",
+    "file": "8-tie-fighter.jpg",
+    "title": "TIE Fighter",
+    "page": "https://www.starwars.com/databank/tie-fighter",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/TIE-Fighter_25397c64.jpeg?region=0%2C1%2C2048%2C1152&width=640"
+  },
+  {
+    "kind": "vehicles",
     "id": "14",
     "file": "14-snowspeeder.jpg",
     "title": "Snowspeeder",
     "page": "https://www.starwars.com/databank/snowspeeder",
     "image": "https://lumiere-a.akamaihd.net/v1/images/snowspeeder_ef2f9334.jpeg?region=0%2C211%2C2048%2C1154&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "16",
+    "file": "16-tie-bomber.jpg",
+    "title": "TIE Bomber",
+    "page": "https://www.starwars.com/databank/tie-bomber",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/tie-bomber-main_d4d9b979.jpeg?region=424%2C0%2C632%2C356&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "18",
+    "file": "18-at-at-walker.jpg",
+    "title": "AT-AT Walker (All Terrain Armored Transport)",
+    "page": "https://www.starwars.com/databank/at-at-walker",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/at-at-walker-main_3d58fb95.jpeg?region=1%2C106%2C1544%2C870&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "19",
+    "file": "19-at-st-walker.jpg",
+    "title": "AT-ST Walker",
+    "page": "https://www.starwars.com/databank/at-st-walker",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/e6d_ia_5724_a150e6d4.jpeg?region=124%2C0%2C1424%2C802&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "20",
+    "file": "20-cloud-car.jpg",
+    "title": "Cloud Car",
+    "page": "https://www.starwars.com/databank/cloud-car",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/cloud-car-main-image_8d2e4e89.jpeg?region=271%2C0%2C1009%2C568&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "24",
+    "file": "24-jabba-s-sail-barge.jpg",
+    "title": "Jabba&#x27;s Sail Barge",
+    "page": "https://www.starwars.com/databank/jabba-s-sail-barge",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_jabbassailbarge_01_169_e3834269.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "25",
+    "file": "25-desert-skiff.jpg",
+    "title": "Desert Skiff",
+    "page": "https://www.starwars.com/databank/desert-skiff",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/skiff_9d81647a.jpeg?region=0%2C88%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "26",
+    "file": "26-tie-interceptor.jpg",
+    "title": "TIE Interceptor",
+    "page": "https://www.starwars.com/databank/tie-interceptor",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/tie-interceptor-2_b2250e79.jpeg?region=0%2C42%2C1560%2C879&width=640"
   },
   {
     "kind": "vehicles",
@@ -505,11 +593,43 @@
   },
   {
     "kind": "vehicles",
+    "id": "33",
+    "file": "33-vulture-droid.jpg",
+    "title": "Vulture Droid (Droid Starfighter)",
+    "page": "https://www.starwars.com/databank/vulture-droid",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_vulturedroid_01_169_6ef9fd50.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "34",
+    "file": "34-mtt.jpg",
+    "title": "MTT",
+    "page": "https://www.starwars.com/databank/mtt",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_mtt_01_169_efb8a98a.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "35",
+    "file": "35-aat-battle-tank.jpg",
+    "title": "AAT (Armored Assault Tank)",
+    "page": "https://www.starwars.com/databank/aat-battle-tank",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_aatbattletank_01_169_9de46aea.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "vehicles",
     "id": "36",
     "file": "36-stap.jpg",
     "title": "STAP",
     "page": "https://www.starwars.com/databank/stap",
     "image": "https://lumiere-a.akamaihd.net/v1/images/databank_stap_01_169_75029522.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "37",
+    "file": "37-trade-federation-landing-ship.jpg",
+    "title": "Trade Federation Landing Ship",
+    "page": "https://www.starwars.com/databank/trade-federation-landing-ship",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_tradefederationlandingship_01_169_00567a01.jpeg?region=0%2C0%2C1560%2C878&width=640"
   },
   {
     "kind": "vehicles",
@@ -521,11 +641,43 @@
   },
   {
     "kind": "vehicles",
+    "id": "42",
+    "file": "42-sith-speeder.jpg",
+    "title": "Sith Speeder",
+    "page": "https://www.starwars.com/databank/sith-speeder",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/databank_sithspeeder_01_169_cfa01a05.jpeg?region=0%2C0%2C1560%2C878&width=640"
+  },
+  {
+    "kind": "vehicles",
     "id": "46",
     "file": "46-xj-6-airspeeder.jpg",
     "title": "XJ-6 Airspeeder",
     "page": "https://www.starwars.com/databank/xj-6-airspeeder",
     "image": "https://lumiere-a.akamaihd.net/v1/images/xj-6-air-speeder_01412aab.jpeg?region=257%2C0%2C1181%2C664&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "50",
+    "file": "50-republic-attack-gunship.jpg",
+    "title": "Republic Attack Gunship",
+    "page": "https://www.starwars.com/databank/republic-attack-gunship",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/republic-attack-gunship-main_6dc2f24e.jpeg?region=237%2C0%2C1445%2C813&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "53",
+    "file": "53-at-te-walker.jpg",
+    "title": "AT-TE Walker",
+    "page": "https://www.starwars.com/databank/at-te-walker",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/at-te-main_09471f2b.jpeg?region=158%2C0%2C964%2C542&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "54",
+    "file": "54-self-propelled-heavy-artillery-turbolaser-spha-t.jpg",
+    "title": "Self-Propelled Heavy Artillery Turbolaser (SPHA-T)",
+    "page": "https://www.starwars.com/databank/self-propelled-heavy-artillery-turbolaser-spha-t",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/self-propelled-heavy-artillery-turbolaser_1d69d1e5.jpeg?region=0%2C0%2C1560%2C880&width=640"
   },
   {
     "kind": "vehicles",
@@ -537,11 +689,51 @@
   },
   {
     "kind": "vehicles",
+    "id": "56",
+    "file": "56-neimoidian-escort-shuttle.jpg",
+    "title": "Neimoidian Escort Shuttle",
+    "page": "https://www.starwars.com/databank/neimoidian-escort-shuttle",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/neimoidian_escort_shuttle_7602d574.jpeg?region=0%2C6%2C1433%2C806&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "57",
+    "file": "57-geonosian-fighter.jpg",
+    "title": "Geonosian Fighter",
+    "page": "https://www.starwars.com/databank/geonosian-fighter",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/geonosian-fighter_119560e5.jpeg?region=0%2C13%2C1560%2C879&width=640"
+  },
+  {
+    "kind": "vehicles",
     "id": "60",
     "file": "60-general-grievous-tsmeu-6-wheel-bike.jpg",
     "title": "General Grievous’ TSMEU-6 Wheel Bike",
     "page": "https://www.starwars.com/databank/general-grievous-tsmeu-6-wheel-bike",
     "image": "https://lumiere-a.akamaihd.net/v1/images/ep3_ia_96565_46396938.jpeg?region=233%2C0%2C1454%2C818&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "69",
+    "file": "69-wookiee-catamaran.jpg",
+    "title": "Wookiee Catamaran",
+    "page": "https://www.starwars.com/databank/wookiee-catamaran",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/wookiee-catamaran_ae2deacf.jpeg?region=70%2C0%2C1181%2C665&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "72",
+    "file": "72-nr-n99-persuader-class-tank-droid.jpg",
+    "title": "NR-N99 Persuader-class Tank Droid",
+    "page": "https://www.starwars.com/databank/nr-n99-persuader-class-tank-droid",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/nr_n99_persuader_class_tank_droid_f910aac1.jpeg?region=379%2C0%2C1181%2C665&width=640"
+  },
+  {
+    "kind": "vehicles",
+    "id": "73",
+    "file": "73-droid-gunship.jpg",
+    "title": "Droid Gunship",
+    "page": "https://www.starwars.com/databank/droid-gunship",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/droid_gunship_20546779.jpeg?region=146%2C0%2C1435%2C807&width=640"
   },
   {
     "kind": "vehicles",
